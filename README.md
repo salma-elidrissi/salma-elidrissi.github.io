@@ -36,6 +36,6 @@ Bienvenue sur mon portfolio professionnel ! Je suis passionnée par la **finance
 ---
 
 ## 📫 Me Contacter & Liens
-* **LinkedIn :** [Salma El Idrissi](https://github.com/salma-elidrissi)
-* **Email :** *(Ton adresse email professionnelle)*
+* **LinkedIn :** [Salma El Idrissi](https://www.linkedin.com/in/salma-el-idrissi-171911224/)
+* **Email :** salma.elidrissi@edu.uiz.ac.ma
 * **GitHub :** [salma-elidrissi](https://github.com/salma-elidrissi)
