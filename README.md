@@ -1,63 +1,117 @@
-PORTFOLIO · PROJETS ACADÉMIQUES
+<div align="center">
 
-# Salma El Idrissi
+# Salma EL IDRISSI
 
-Élève ingénieure en Finance et Ingénierie Décisionnelle — projets réalisés dans le cadre de mes cours, chacun avec son code, son rapport et, quand c’est le cas, une application en ligne.
+### Élève ingénieure en Finance et Ingénierie Décisionnelle
 
-[GitHub](#) [Email](mailto:votre.email@exemple.com) [LinkedIn](#) [CV](#)
+*De la valorisation d'options à la segmentation de données : mes projets académiques, avec rapport, code et interface.*
 
-CATALOGUE DES PROJETS
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Salma%20EL%20IDRISSI-1c2fcf?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/VOTRE-LIEN)
+[![Email](https://img.shields.io/badge/Email-Me%20contacter-0fae83?style=for-the-badge&logo=gmail&logoColor=white)](mailto:votre.email@exemple.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Voir%20la%20page-ff7a2f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://salma-elidrissi.github.io)
+[![CV](https://img.shields.io/badge/CV-Télécharger-0a1047?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://LIEN-DE-VOTRE-CV)
 
-OPTFinance quantitative
+</div>
 
-## Pricing d’options : rapport, interface et code
+---
 
-Valorisation d’options et calcul de leurs sensibilités, avec un rapport détaillé et une interface interactive pour faire varier les paramètres et voir le prix évoluer.
+## À propos
 
-- Python
-- Black-Scholes
-- Monte Carlo
-- Finance quantitative
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à *[Nom de votre école]*. Je travaille à l'intersection de la **finance quantitative**, de la **data science** et de l'**aide à la décision**.
 
-[Code](#)[Rapport](#)[Interface](#)
+Ce dépôt rassemble mes projets académiques. Chacun est accompagné de son rapport, de son code et, quand il existe, d'une interface en ligne.
 
-TAUXFinance quantitative
+- 🔭 À la recherche d'un **stage / PFE** en *[finance de marché, gestion des risques, data analytics…]*
+- 📍 Basée à *[Ville, Maroc]*
 
-## Modélisation de l’impact des taux d’intérêt sur les décisions d’investissement au Maroc
+---
 
-Étude de la façon dont l’évolution des taux d’intérêt influence les choix d’investissement au Maroc, avec modélisation, analyse des résultats et rapport.
+## Mes projets
 
-- Modélisation
-- Économétrie
-- Séries temporelles
-- Finance quantitative
+| Code | Projet | Domaine | Livrables |
+|:----:|--------|---------|-----------|
+| `OPT` | [Pricing d'options](#-opt--pricing-doptions) | Finance quantitative | Rapport · Interface · Code |
+| `TAUX` | [Impact des taux d'intérêt sur l'investissement au Maroc](#-taux--impact-des-taux-dintérêt-sur-les-décisions-dinvestissement-au-maroc) | Finance quantitative | Rapport · Code |
+| `VOL` | [Prédiction des prix des vols](#-vol--prédiction-des-prix-des-vols) | Data science | Rapport · Code |
+| `SEG` | [Classification et segmentation (CAH et K-means)](#-seg--classification-et-segmentation-par-cah-et-k-means) | Data science | Rapport · Code |
 
-[Code](#)[Rapport](#)
+---
 
-VOLData science
+### 📈 OPT · Pricing d'options
 
-## Prédiction des prix des vols
+Valorisation d'options et calcul de leurs sensibilités, avec une interface interactive pour faire varier les paramètres et observer l'évolution du prix.
 
-Modèle de machine learning qui estime le prix d’un billet d’avion à partir de ses caractéristiques, avec comparaison des modèles testés.
+```
+C = S·N(d₁) − K·e^(−rT)·N(d₂)
+```
 
-- Python
-- Machine Learning
-- Régression
-- Data science
+- **Méthodes :** *[Black-Scholes, Monte Carlo, arbre binomial… à adapter]*
+- **Outils :** `Python` `NumPy` `Pandas` *[Streamlit / autre pour l'interface]*
+- **Livrables :** [📄 Rapport](LIEN) · [🖥️ Interface en ligne](LIEN) · [💻 Code](LIEN)
 
-[Code](#)[Rapport](#)
+---
 
-SEGData science
+### 📉 TAUX · Impact des taux d'intérêt sur les décisions d'investissement au Maroc
 
-## Classification et segmentation de données par CAH et K-means
+Modélisation de la façon dont l'évolution des taux d'intérêt influence les choix d'investissement au Maroc.
+
+- **Question de recherche :** une hausse des taux réduit-elle l'investissement ? *(∂I / ∂r < 0 ?)*
+- **Méthodes :** *[régression, séries temporelles, modèle économétrique… à adapter]*
+- **Données :** *[sources utilisées]*
+- **Outils :** `Python` / `R` *[à adapter]*
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
+
+---
+
+### ✈️ VOL · Prédiction des prix des vols
+
+Modèle de machine learning qui estime le prix d'un billet d'avion à partir de ses caractéristiques.
+
+- **Démarche :** nettoyage des données, création de variables, entraînement et comparaison de modèles
+- **Modèles testés :** *[régression linéaire, Random Forest, XGBoost… à adapter]*
+- **Résultat clé :** *[métrique : R², RMSE…]*
+- **Outils :** `Python` `Scikit-learn` `Pandas`
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
+
+---
+
+### 🧩 SEG · Classification et segmentation par CAH et K-means
 
 Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.
 
-- Python
-- CAH
-- K-means
-- Data science
+```
+argmin Σₖ Σ ‖x − μₖ‖²
+```
 
-[Code](#)[Rapport](#)
+- **Méthodes :** Classification Ascendante Hiérarchique (dendrogramme) et K-means
+- **Démarche :** choix du nombre de classes, comparaison des deux méthodes, interprétation des segments
+- **Outils :** `Python` / `R` *[à adapter]*
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
 
-Salma El Idrissi · Finance et Ingénierie Décisionnelle
+---
+
+## Compétences
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+*Gardez uniquement les outils que vous maîtrisez.*
+
+---
+
+## Formation
+
+- 🎓 **Cycle ingénieur, Finance et Ingénierie Décisionnelle**, *[École]* (*[année]* – présent)
+- 📘 *[Classes préparatoires / Licence]*, *[Établissement]*
+
+---
+
+## Contact
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/VOTRE-LIEN)
+- 📧 votre.email@exemple.com
