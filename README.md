@@ -1,177 +1,117 @@
 <div align="center">
 
-# 👋 Salma EL IDRISSI
+# Salma EL IDRISSI
 
-### Élève ingénieure en Ingénierie Financière et Décisionnelle
+### Élève ingénieure en Finance et Ingénierie Décisionnelle
 
-*Finance de marché • Data Science • Aide à la décision • Gestion des risques*
+*De la valorisation d'options à la segmentation de données : mes projets académiques, avec rapport, code et interface.*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Salma%20EL%20IDRISSI-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/VOTRE-LIEN)
-[![Email](https://img.shields.io/badge/Email-Me%20contacter-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:votre.email@exemple.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Profil-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VOTRE-PSEUDO)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Salma%20EL%20IDRISSI-1c2fcf?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/VOTRE-LIEN)
+[![Email](https://img.shields.io/badge/Email-Me%20contacter-0fae83?style=for-the-badge&logo=gmail&logoColor=white)](mailto:votre.email@exemple.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Voir%20la%20page-ff7a2f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://LIEN-DE-VOTRE-PORTFOLIO)
+[![CV](https://img.shields.io/badge/CV-Télécharger-0a1047?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://LIEN-DE-VOTRE-CV)
 
 </div>
 
 ---
 
-## 🎓 À propos de moi
+## À propos
 
-Élève ingénieure en **Finance et Ingénierie Décisionnelle** à *[Nom de votre école]*, je m'intéresse à l'intersection entre **la finance quantitative, la data science et l'aide à la décision**.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à *[Nom de votre école]*. Je travaille à l'intersection de la **finance quantitative**, de la **data science** et de l'**aide à la décision**.
 
-Ce dépôt regroupe l'ensemble de mes **projets académiques** réalisés au cours de ma formation.
+Ce dépôt rassemble mes projets académiques. Chacun est accompagné de son rapport, de son code et, quand il existe, d'une interface en ligne.
 
-- 🔭 Actuellement à la recherche d'un **stage / PFE** en *[finance de marché, gestion des risques, data analytics…]*
-- 🌱 En train d'approfondir : *[Machine Learning, Python pour la finance, Power BI…]*
+- 🔭 À la recherche d'un **stage / PFE** en *[finance de marché, gestion des risques, data analytics…]*
 - 📍 Basée à *[Ville, Maroc]*
 
 ---
 
-## 🛠️ Compétences
+## Mes projets
 
-### Finance
-![Finance de marché](https://img.shields.io/badge/Finance%20de%20march%C3%A9-1F4E79?style=flat-square)
-![Gestion des risques](https://img.shields.io/badge/Gestion%20des%20risques-1F4E79?style=flat-square)
-![Évaluation d'actifs](https://img.shields.io/badge/Evaluation%20d'actifs-1F4E79?style=flat-square)
-![Gestion de portefeuille](https://img.shields.io/badge/Gestion%20de%20portefeuille-1F4E79?style=flat-square)
+| Code | Projet | Domaine | Livrables |
+|:----:|--------|---------|-----------|
+| `OPT` | [Pricing d'options](#-opt--pricing-doptions) | Finance quantitative | Rapport · Interface · Code |
+| `TAUX` | [Impact des taux d'intérêt sur l'investissement au Maroc](#-taux--impact-des-taux-dintérêt-sur-les-décisions-dinvestissement-au-maroc) | Finance quantitative | Rapport · Code |
+| `VOL` | [Prédiction des prix des vols](#-vol--prédiction-des-prix-des-vols) | Data science | Rapport · Code |
+| `SEG` | [Classification et segmentation (CAH et K-means)](#-seg--classification-et-segmentation-par-cah-et-k-means) | Data science | Rapport · Code |
 
-### Data & Décisionnel
+---
+
+### 📈 OPT · Pricing d'options
+
+Valorisation d'options et calcul de leurs sensibilités, avec une interface interactive pour faire varier les paramètres et observer l'évolution du prix.
+
+```
+C = S·N(d₁) − K·e^(−rT)·N(d₂)
+```
+
+- **Méthodes :** *[Black-Scholes, Monte Carlo, arbre binomial… à adapter]*
+- **Outils :** `Python` `NumPy` `Pandas` *[Streamlit / autre pour l'interface]*
+- **Livrables :** [📄 Rapport](LIEN) · [🖥️ Interface en ligne](LIEN) · [💻 Code](LIEN)
+
+---
+
+### 📉 TAUX · Impact des taux d'intérêt sur les décisions d'investissement au Maroc
+
+Modélisation de la façon dont l'évolution des taux d'intérêt influence les choix d'investissement au Maroc.
+
+- **Question de recherche :** une hausse des taux réduit-elle l'investissement ? *(∂I / ∂r < 0 ?)*
+- **Méthodes :** *[régression, séries temporelles, modèle économétrique… à adapter]*
+- **Données :** *[sources utilisées]*
+- **Outils :** `Python` / `R` *[à adapter]*
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
+
+---
+
+### ✈️ VOL · Prédiction des prix des vols
+
+Modèle de machine learning qui estime le prix d'un billet d'avion à partir de ses caractéristiques.
+
+- **Démarche :** nettoyage des données, création de variables, entraînement et comparaison de modèles
+- **Modèles testés :** *[régression linéaire, Random Forest, XGBoost… à adapter]*
+- **Résultat clé :** *[métrique : R², RMSE…]*
+- **Outils :** `Python` `Scikit-learn` `Pandas`
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
+
+---
+
+### 🧩 SEG · Classification et segmentation par CAH et K-means
+
+Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.
+
+```
+argmin Σₖ Σ ‖x − μₖ‖²
+```
+
+- **Méthodes :** Classification Ascendante Hiérarchique (dendrogramme) et K-means
+- **Démarche :** choix du nombre de classes, comparaison des deux méthodes, interprétation des segments
+- **Outils :** `Python` / `R` *[à adapter]*
+- **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
+
+---
+
+## Compétences
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![Excel](https://img.shields.io/badge/Excel%20%2F%20VBA-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-
-### Outils
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
 
-> ✏️ *Supprimez ou ajoutez des badges selon vos vraies compétences.*
+*Gardez uniquement les outils que vous maîtrisez.*
 
 ---
 
-## 📚 Mes projets académiques
+## Formation
 
-| # | Projet | Domaine | Technologies | Lien |
-|---|--------|---------|--------------|------|
-| 1 | **[Titre du projet 1]** | Finance de marché | Python, Pandas | [📂 Voir](#projet-1) |
-| 2 | **[Titre du projet 2]** | Data Science | Python, Scikit-learn | [📂 Voir](#projet-2) |
-| 3 | **[Titre du projet 3]** | Business Intelligence | Power BI, SQL | [📂 Voir](#projet-3) |
-| 4 | **[Titre du projet 4]** | Gestion des risques | Excel, VBA | [📂 Voir](#projet-4) |
-| 5 | **[Titre du projet 5]** | Recherche opérationnelle | Python, R | [📂 Voir](#projet-5) |
+- 🎓 **Cycle ingénieur, Finance et Ingénierie Décisionnelle**, *[École]* (*[année]* – présent)
+- 📘 *[Classes préparatoires / Licence]*, *[Établissement]*
 
 ---
 
-### Projet 1
-#### 📈 [Titre du projet] — *ex. Optimisation de portefeuille (Markowitz)*
+## Contact
 
-- **Contexte :** Module *[nom du module]*, *[année / semestre]*
-- **Objectif :** *[Décrivez en une phrase le problème à résoudre]*
-- **Démarche :**
-  - Collecte et nettoyage des données (*source*)
-  - Modélisation / méthodes utilisées (*ex. frontière efficiente*)
-  - Analyse et interprétation des résultats
-- **Résultats :** *[Un chiffre ou une conclusion clé]*
-- **Outils :** `Python` `Pandas` `NumPy` `Matplotlib`
-- 🔗 [Code source](https://github.com/VOTRE-PSEUDO/projet-1) • [Rapport PDF](#)
-
----
-
-### Projet 2
-#### 🤖 [Titre du projet] — *ex. Prédiction du risque de crédit*
-
-- **Contexte :** Module *[nom du module]*, *[année / semestre]*
-- **Objectif :** *[Description]*
-- **Démarche :**
-  - *[Étape 1]*
-  - *[Étape 2]*
-  - *[Étape 3]*
-- **Résultats :** *[Performance du modèle, conclusion]*
-- **Outils :** `Python` `Scikit-learn` `Seaborn`
-- 🔗 [Code source](https://github.com/VOTRE-PSEUDO/projet-2) • [Rapport PDF](#)
-
----
-
-### Projet 3
-#### 📊 [Titre du projet] — *ex. Tableau de bord décisionnel*
-
-- **Contexte :** Module *[nom du module]*, *[année / semestre]*
-- **Objectif :** *[Description]*
-- **Démarche :**
-  - Conception de l'entrepôt de données / modèle en étoile
-  - Création des indicateurs (KPI)
-  - Visualisation et storytelling
-- **Résultats :** *[Description]*
-- **Outils :** `Power BI` `SQL` `DAX`
-- 🔗 [Code source](https://github.com/VOTRE-PSEUDO/projet-3) • [Démo](#)
-
----
-
-### Projet 4
-#### 🛡️ [Titre du projet] — *ex. Calcul de la VaR et stress testing*
-
-- **Contexte :** Module *[nom du module]*, *[année / semestre]*
-- **Objectif :** *[Description]*
-- **Démarche :**
-  - *[Étape 1]*
-  - *[Étape 2]*
-- **Résultats :** *[Description]*
-- **Outils :** `Excel` `VBA` `Python`
-- 🔗 [Code source](https://github.com/VOTRE-PSEUDO/projet-4)
-
----
-
-### Projet 5
-#### ⚙️ [Titre du projet] — *ex. Programmation linéaire / Aide à la décision multicritère*
-
-- **Contexte :** Module *[nom du module]*, *[année / semestre]*
-- **Objectif :** *[Description]*
-- **Démarche :** *[Méthodes : simplexe, AHP, TOPSIS…]*
-- **Résultats :** *[Description]*
-- **Outils :** `Python` `R`
-- 🔗 [Code source](https://github.com/VOTRE-PSEUDO/projet-5)
-
----
-
-> ➕ *Copiez le bloc d'un projet pour en ajouter autant que nécessaire (projets de fin d'année, stages, hackathons, mini-projets…).*
-
----
-
-## 🏆 Formation & Certifications
-
-- 🎓 **Cycle ingénieur — Ingénierie Financière et Décisionnelle**, *[École]* (*[année] – présent*)
-- 📘 *[Classes préparatoires / Licence]*, *[Établissement]* (*[années]*)
-- 📜 *[Certification 1 — ex. Python for Finance, Coursera]*
-- 📜 *[Certification 2 — ex. Microsoft Power BI Data Analyst]*
-
----
-
-## 🤝 Expériences & Vie associative
-
-- 💼 **[Poste]** — *[Entreprise]* (*[durée]*) : *[mission en une ligne]*
-- 🌟 **[Rôle]** — *[Club / Association]* : *[contribution]*
-
----
-
-## 🌍 Langues
-
-🇲🇦 Arabe (langue maternelle) • 🇫🇷 Français (courant) • 🇬🇧 Anglais (*[niveau]*)
-
----
-
-## 📫 Me contacter
-
-N'hésitez pas à me contacter pour échanger sur la finance, la data ou d'éventuelles opportunités :
-
-- 💼 **LinkedIn :** [Salma EL IDRISSI](https://www.linkedin.com/in/VOTRE-LIEN)
-- 📧 **Email :** votre.email@exemple.com
-
----
-
-<div align="center">
-
-⭐ *Merci d'avoir visité mon profil !* ⭐
-
-</div>
+- 💼 [LinkedIn](https://www.linkedin.com/in/VOTRE-LIEN)
+- 📧 votre.email@exemple.com
