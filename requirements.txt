@@ -1,5 +1,6 @@
 streamlit>=1.50
 scikit-learn
+statsmodels
 matplotlib
 xgboost
 cvxpy
@@ -8,3 +9,4 @@ scipy
 pandas
 plotly
 pytest
+openpyxl
