@@ -4,7 +4,7 @@
 
 ### Élève ingénieure en Finance et Ingénierie Décisionnelle
 
-*De la valorisation d'options à la segmentation de données : mes projets académiques, avec rapport, code et interface.*
+*Mes projets académiques, avec rapport, code et interface.*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Salma%20EL%20IDRISSI-3f5f85?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salma-el-idrissi-171911224/)
 [![Email](https://img.shields.io/badge/Email-Me%20contacter-4a6358?style=for-the-badge&logo=gmail&logoColor=white)](mailto:salma.elidrissi@edu.uiz.ac.ma)
