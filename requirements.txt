@@ -1,6 +1,7 @@
 streamlit>=1.50
 scikit-learn
 matplotlib
+xgboost
 cvxpy
 numpy
 scipy
