@@ -17,12 +17,12 @@
 
 ## À propos
 
-Élève ingénieure en **Finance et Ingénierie Décisionnelle** à *[Nom de votre école]*. Je travaille à l'intersection de la **finance quantitative**, de la **data science** et de l'**aide à la décision**.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à ENSA. Je travaille à l'intersection de la **finance quantitative**, de la **data science** et de l'**aide à la décision**.
 
 Ce dépôt rassemble mes projets académiques. Chacun est accompagné de son rapport, de son code et, quand il existe, d'une interface en ligne.
 
-- 🔭 À la recherche d'un **stage / PFE** en *[finance de marché, gestion des risques, data analytics…]*
-- 📍 Basée à *[Ville, Maroc]*
+- 🔭 À la recherche d'un **stage / PFE** en finance de marché, gestion des risques, data analytics*
+- 📍 Basée à AGADIR
 
 ---
 
