@@ -3,7 +3,6 @@ Installation : pip install streamlit numpy scipy pandas plotly yfinance
 Lancement    : streamlit run app.py
 """
 import time
-import pathlib
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
@@ -12,99 +11,104 @@ from scipy.stats import norm
 import streamlit as st
 
 st.set_page_config(page_title="Pricing des Options", layout="wide")
-BIN, TRI, BSC = "#4f46e5", "#d97706", "#111827"
+BIN, TRI, BSC = "#4f46e5", "#d97706", "#0f172a"
 
-# ───────────────────────── Styles CSS (Amélioration du contraste) ─────────────────────────
+# ───────────────────────── CSS Haute Lisibilité & Contraste ─────────────────────────
 st.markdown("""<style>
-/* Configuration générale du fond et de la police */
+/* Style global pour la lisibilité et fort contraste */
 [data-testid=stAppViewContainer] {
-    background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 55%, #f5f3ff 100%);
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+p, span, div, label, h1, h2, h3, h4, h5, h6, li, .stMarkdown {
     color: #0f172a !important;
 }
 
-[data-testid=stHeader] {
-    background: transparent;
-}
-
-/* Force les textes standards, labels et paragraphes à être sombres */
-html, body, [class*="css"], .stMarkdown, p, span, label, div {
-    color: #0f172a;
-}
-
-/* Alignement du conteneur principal */
-.block-container {
-    padding-top: 1.3rem;
-    max-width: 1400px;
-}
-
-/* Cartes de métriques */
-[data-testid=stMetric] {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    padding: 10px 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-[data-testid=stMetricValue] {
-    color: #1e1b4b !important;
-    font-weight: 700;
-}
-[data-testid=stMetricLabel] {
-    color: #475569 !important;
-}
-
-/* Bannière Hero - Contraste corrigé */
+/* En-tête / Hero banner */
 .hero {
-    background: linear-gradient(120deg, #c7d2fe, #e0e7ff);
-    border: 1px solid #a5b4fc;
-    color: #1e1b4b !important;
-    padding: 18px 26px;
-    border-radius: 12px;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: #ffffff !important;
+    border: 2px solid #6366f1 !important;
+    color: #0f172a !important;
+    padding: 20px 26px !important;
+    border-radius: 12px !important;
+    margin-bottom: 18px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
 }
 .hero h1 {
     color: #1e1b4b !important;
-    margin: 0;
-    font-size: 1.7rem;
-    font-weight: 800;
+    margin: 0 !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
 }
 .hero p {
-    margin: 4px 0 0;
-    color: #312e81 !important;
-    font-weight: 600;
+    color: #334155 !important;
+    margin: 6px 0 0 !important;
+    font-weight: 500 !important;
 }
 
-/* Boutons de navigation et boutons standards */
-.stButton>button {
-    background: #ffffff !important;
-    border: 1.5px solid #6366f1 !important;
-    border-radius: 999px !important;
-    color: #1e1b4b !important;
-    min-height: 2.9rem;
+/* Cadres, Containers, Métriques et Formulaires */
+[data-testid="stMetric"], div[data-testid="stForm"], div[data-testid="stVerticalBlock"] > div[style*="border"] {
+    background-color: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+
+/* Métriques */
+[data-testid="stMetricLabel"] p {
+    color: #475569 !important;
     font-weight: 600 !important;
 }
-.stButton>button:hover {
-    border-color: #312e81 !important;
-    color: #4f46e5 !important;
-    background: #f8fafc !important;
+[data-testid="stMetricValue"] div {
+    color: #1e1b4b !important;
+    font-weight: 700 !important;
 }
-.stButton>button[kind=primary], .stButton>button[data-testid=stBaseButton-primary] {
-    background: #4f46e5 !important;
+
+/* Champs de saisie (Inputs, Selects, Sliders) */
+div[data-baseweb=input] > div, div[data-baseweb=select] > div {
+    background-color: #ffffff !important;
+    border: 1.5px solid #94a3b8 !important;
+    color: #0f172a !important;
+    border-radius: 8px !important;
+}
+input {
+    color: #0f172a !important;
+}
+
+/* Boutons de navigation et de calcul */
+.stButton > button {
+    background-color: #ffffff !important;
+    border: 2px solid #4f46e5 !important;
+    border-radius: 999px !important;
+    color: #1e1b4b !important;
+    min-height: 2.9rem !important;
+    font-weight: 700 !important;
+}
+.stButton > button:hover {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+}
+.stButton > button[kind="primary"], .stButton > button[data-testid="stBaseButton-primary"] {
+    background-color: #4f46e5 !important;
     color: #ffffff !important;
     border-color: #4f46e5 !important;
 }
-
-/* Saisie de texte et sélecteurs */
-div[data-baseweb=input]>div, div[data-baseweb=select]>div {
-    background: #ffffff !important;
-    color: #0f172a !important;
-    border-color: #cbd5e1 !important;
+.stButton > button[kind="primary"] *, .stButton > button[data-testid="stBaseButton-primary"] * {
+    color: #ffffff !important;
 }
 
-/* Modificateurs pour la lisibilité des textes markdown */
-.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
-    color: #1e1b4b !important;
+/* Radio buttons & Checkboxes */
+div[role="radiogroup"] label p {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+/* Expander & Accordions */
+.streamlit-expanderHeader {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
 }
 </style>""", unsafe_allow_html=True)
 
@@ -167,6 +171,15 @@ def benchmark(P, call, amer):
             rows.append(dict(Modèle=m, N=N, Prix=v, Erreur=abs(v - ref), Temps_ms=ms))
     return pd.DataFrame(rows), ref
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def market(tk):
+    try:
+        import yfinance as yf
+        h = yf.Ticker(tk).history(period="1y")["Close"].dropna()
+        return float(h.iloc[-1]), float(np.log(h / h.shift(1)).std() * np.sqrt(252))
+    except Exception:
+        return None
+
 def draw_tree(L, color):
     ex, ey = [], []
     for i in range(len(L) - 1):
@@ -179,7 +192,7 @@ def draw_tree(L, color):
         for s_, v, x in zip(Si, Vi, Xi):
             X.append(i); Y.append(s_); T_.append(f"{v:.2f}"); C.append("#d1495b" if x else color)
     f = go.Figure()
-    f.add_scatter(x=ex, y=ey, mode="lines", line=dict(color="#94a3b8", width=1), hoverinfo="skip", showlegend=False)
+    f.add_scatter(x=ex, y=ey, mode="lines", line=dict(color="#cbd5e1", width=1), hoverinfo="skip", showlegend=False)
     f.add_scatter(x=X, y=Y, mode="markers+text", text=T_, textposition="top center", marker=dict(size=9, color=C),
                   hovertemplate="pas %{x}<br>S=%{y:.2f}<br>V=%{text}<extra></extra>", showlegend=False)
     f.update_layout(height=520, template="plotly_white", xaxis_title="Pas i", yaxis_title="Sous-jacent S", margin=dict(t=20))
@@ -200,7 +213,10 @@ def fondements():
     )
 
     if b.startswith("Concepts"):
+
+        # 1. Définitions des concepts fondamentaux
         st.subheader("1. Définitions des concepts fondamentaux")
+
         st.markdown("""
         - **Call (option d'achat)** : contrat qui donne à son détenteur
           le droit d'acheter un actif sous-jacent au prix d'exercice
@@ -221,7 +237,9 @@ def fondements():
           favorable avant l'échéance.
         """)
 
+        # 2. Formules regroupées dans un bloc
         st.subheader("2. Formules des payoffs et du prix de l'option")
+
         with st.container(border=True):
             st.markdown("**Payoff du Call à l'échéance**")
             st.latex(r"C_T = (S_T-K)^+")
@@ -248,7 +266,9 @@ def fondements():
             "et T la date d'échéance."
         )
 
+        # 3. Facteurs influençant le prix des options
         st.subheader("3. Facteurs influençant le prix des options")
+
         st.markdown("""
         Le prix d'une option dépend de plusieurs paramètres du marché
         et des caractéristiques du contrat.
@@ -292,14 +312,16 @@ def fondements():
             "notamment des paramètres et de la proximité de l'échéance."
         )
 
+        # 4. Guide de choix du modèle
         st.subheader("4. Guide de choix du modèle de valorisation")
+
         with st.container(border=True):
             st.markdown("### Situations adaptées au modèle Black-Scholes:")
             st.markdown("""
             - **Type d'option :** vous valorisez principalement des options vanilles européennes (Call ou Put).
             - **Rapidité :** vous souhaitez obtenir rapidement un prix théorique à l'aide d'une formule analytique.
             - **Analyse financière :** vous souhaitez calculer facilement les sensibilités du prix (Delta, Gamma, Vega, Theta et Rho).
-            - **Cadre de modélisation :** les hypothèses du modèle,notamment celles relatives à la volatilité et à la dynamique du sous-jacent, sont adaptées à votre situation.
+            - **Cadre de modélisation :** les hypothèses du modèle, notamment celles relatives à la volatilité et à la dynamique du sous-jacent, sont adaptées à votre situation.
             """)
 
             st.divider()
@@ -329,13 +351,13 @@ def fondements():
             "dépend du contrat, des hypothèses et de la précision recherchée."
         )
         
+        # 5. Remarque importante
         st.info(
             "Sans dividende et avec un taux d'intérêt non négatif, "
             "un Call américain vaut autant qu'un Call européen. "
             "Un Put américain vaut au moins autant que le Put européen "
             "correspondant, et peut valoir strictly plus."
         )
-
     elif b == "Black-Scholes":
         st.markdown("**Hypothèses** : prix log-normal à σ et r constants, marché sans friction ni arbitrage, option européenne.")
         st.latex(r"C=Se^{-qT}N(d_1)-Ke^{-rT}N(d_2),\quad P=Ke^{-rT}N(-d_2)-Se^{-qT}N(-d_1)")
@@ -367,14 +389,16 @@ def fondements():
             st.markdown("Neutralité au risque : $\\mathbb E^{\\mathbb Q}[S_{t+\\Delta t}]=Se^{(r-q)\\Delta t}$, soit $pu+(1-p)d=e^{(r-q)\\Delta t}$, d'où $p$.")
             st.markdown("Le $\\max$ ne s'applique que pour le style américain. Condition : $0\\le p\\le1$.")
         st.markdown("#### Atouts du modèle binomial")
+
         st.markdown("""
         - **Simplicité de mise en œuvre :** sa structure en arbre à deux branches permet de comprendre et de programmer progressivement le mécanisme de valorisation.
-        - **Exercice anticipé :** il permet de comparer, à chaque nœud,la valeur de continuation et la valeur d'exercice immédiat, ce qui est particulièrement utile pour les options américaines.
+        - **Exercice anticipé :** il permet de comparer, à chaque nœud, la valeur de continuation et la valeur d'exercice immédiat, ce qui est particulièrement utile pour les options américaines.
         - **Flexibilité des payoffs :** il peut être adapté à différentes conditions d'exercice et à certains produits dont le payoff dépend du chemin suivi par le sous-jacent.
         - **Contrôle de la précision :** le nombre de pas peut être augmenté pour étudier la convergence du prix et la stabilité des résultats.
         """)
 
         st.markdown("#### Limites du modèle binomial")
+
         st.markdown("""
         - **Convergence numérique :** pour les options vanilles standards, l'erreur est souvent d'ordre O(1/N), où N représente le nombre de pas, mais des oscillations peuvent apparaître selon la discrétisation et les paramètres du contrat.
         - **Coût de calcul :** augmenter le nombre de pas améliore souvent la précision, mais augmente également le temps de calcul.
@@ -387,6 +411,7 @@ def fondements():
         st.latex(r"V_i^k=\max\Big(\text{payoff},\ e^{-r\Delta t}\big[p_uV_{i+1}^{k}+p_mV_{i+1}^{k+1}+p_dV_{i+1}^{k+2}\big]\Big)")
         st.markdown("Trois issues par pas : le trinomial correspond à un **schéma de différences finies explicite** de l'EDP de Black-Scholes.")
         st.markdown("#### Atouts du modèle trinomial")
+
         st.markdown("""
         - **Convergence numérique :** il peut offrir une convergence plus régulière que certains arbres binomiaux, selon la construction de l'arbre et les paramètres du contrat.
         - **Flexibilité de modélisation :** les trois mouvements possibles (hausse, baisse ou stabilité) offrent davantage de possibilités pour représenter l'évolution du sous-jacent.
@@ -395,6 +420,7 @@ def fondements():
         """)
 
         st.markdown("#### Limites du modèle trinomial")
+
         st.markdown("""
         - **Coût de calcul :** chaque étape comporte trois branches au lieu de deux, ce qui augmente le nombre de calculs par étape.
         - **Mémoire nécessaire :** la taille de l'arbre et le stockage des valeurs peuvent devenir plus importants selon son implémentation.
@@ -454,7 +480,7 @@ def comparaison(P, call, amer, N):
     ck = pd.DataFrame(rows, columns=["Test", "Écart", "Tolérance"]); ck["Statut"] = np.where(ck.Écart <= ck.Tolérance, "✅", "❌")
     st.dataframe(ck, hide_index=True, use_container_width=True)
 
-# ───────────────────────── Interface et Navigation ─────────────────────────
+# ───────────────────────── Interface ─────────────────────────
 HERO = ('<div class="hero"><h1> Pricing des Options </h1><p>Black-Scholes · Binomial · Trinomial</p></div>')
 GREEK_INFO = {"Delta": "Variation du prix pour +1 sur S (ratio de couverture).", "Gamma": "Variation du Delta : convexité, risque de rebalancement.",
               "Vega (pour 1 %)": "Gain pour +1 point de volatilité.", "Theta (par an)": "Perte de valeur temps avec le passage du temps.",
@@ -496,7 +522,7 @@ def market(tk):
         if len(h) > 30: return float(h.iloc[-1]), float(np.log(h / h.shift(1)).std() * np.sqrt(252)), "Stooq"
         err.append("Stooq : historique vide")
     except Exception as e: err.append(f"Stooq : {e}")
-    raise RuntimeError(" | ".join(err))
+    raise RuntimeError(" | ".join(err))  # une exception n'est jamais mise en cache
 
 def params_form(key, trees):
     st.markdown("##### 1 · Données de marché")
@@ -596,9 +622,10 @@ elif pg == PAGES[2]: model_page("Binomial", BIN, "bin")
 elif pg == PAGES[3]: model_page("Trinomial", TRI, "tri")
 elif pg == PAGES[4]: cmp_page()
 else:
-    st.header("📖 Rapport PDF"); f_ = pathlib.Path(__file__).with_name("pricing_option_arbres.pdf")
-    if f_.exists(): st.download_button("Télécharger le rapport", f_.read_bytes(), "pricing_option_arbres.pdf", "application/pdf")
-    else: st.info("Placez le fichier `pricing_option_arbres.pdf` à côté de `app.py` pour le rendre téléchargeable ici.")
+    import pathlib
+    st.header("📖 Rapport PDF"); f_ = pathlib.Path(__file__).with_name("projet_pricing_bino_trino.pdf")
+    if f_.exists(): st.download_button("Télécharger le rapport", f_.read_bytes(), "projet_pricing_bino_trino.pdf", "application/pdf")
+    else: st.info("Placez le fichier `projet_pricing_bino_trino.pdf` à côté de `app.py` pour le rendre téléchargeable ici.")
 
 st.markdown("""
 <style>
@@ -607,12 +634,12 @@ st.markdown("""
     padding: 20px;
     border-top: 1px solid #cbd5e1;
     text-align: center;
-    color: #1e293b !important;
+    color: #334155;
     font-size: 14px;
     line-height: 1.8;
 }
 .academic-footer .title {
-    color: #4f46e5 !important;
+    color: #4f46e5;
     font-size: 17px;
     font-weight: bold;
 }
@@ -621,7 +648,7 @@ st.markdown("""
 <div class="academic-footer">
     <div class="title">Projet académique : Pricing des Options</div>
     <div>Année universitaire : 2026–2027</div>
-    <div>Réalisé par : EL IDRISSI Salma</div>
+    <div>Réalisé par : SALMA EL IDRISSI</div>
     <div>Black-Scholes · Binomial · Trinomial</div>
 </div>
 """, unsafe_allow_html=True)
