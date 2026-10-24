@@ -596,9 +596,9 @@ elif pg == PAGES[2]: model_page("Binomial", BIN, "bin")
 elif pg == PAGES[3]: model_page("Trinomial", TRI, "tri")
 elif pg == PAGES[4]: cmp_page()
 else:
-    st.header("📖 Rapport PDF"); f_ = pathlib.Path(__file__).with_name("projet_pricing_bino_trino.pdf")
-    if f_.exists(): st.download_button("Télécharger le rapport", f_.read_bytes(), "projet_pricing_bino_trino.pdf", "application/pdf")
-    else: st.info("Placez le fichier `projet_pricing_bino_trino.pdf` à côté de `app.py` pour le rendre téléchargeable ici.")
+    st.header("📖 Rapport PDF"); f_ = pathlib.Path(__file__).with_name("pricing_option_arbres.pdf")
+    if f_.exists(): st.download_button("Télécharger le rapport", f_.read_bytes(), "pricing_option_arbres.pdf", "application/pdf")
+    else: st.info("Placez le fichier `pricing_option_arbres.pdf` à côté de `app.py` pour le rendre téléchargeable ici.")
 
 st.markdown("""
 <style>
