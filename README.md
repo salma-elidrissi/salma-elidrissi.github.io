@@ -109,7 +109,6 @@ argmin Σₖ Σ ‖x − μₖ‖²
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-*Gardez uniquement les outils que vous maîtrisez.*
 
 ---
 
