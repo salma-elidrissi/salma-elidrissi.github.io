@@ -108,12 +108,12 @@ footer{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;color:
    ===================================================================== */
 var PROFIL = {
   nom: "Salma El Idrissi",
-  titre: "Élève ingénieure en Finance et Ingénierie Décisionnelle",
-  intro: "Mes projets réalisés dans le cadre de mes cours, chacun avec son code, son rapport et, quand c’est le cas, une application en ligne.",
+  titre: "Élève-ingénieur en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je suis actuellement à la recherche d’un Projet de Fin d’Études (PFE) me permettant de mettre en pratique mes compétences techniques, de contribuer à des projets à forte valeur ajoutée et d’approfondir mon expertise dans un environnement professionnel stimulant.",
+  intro: "À travers ce portfolio, je vous invite à découvrir les projets que j’ai menés au cours de mon parcours d’ingénieur, témoignant de mes compétences techniques, de ma capacité à concevoir des solutions concrètes et de mon engagement dans la réalisation de projets innovants. Vous y trouverez également les codes sources, les documentations techniques ainsi que les applications déployées en ligne, lorsqu’elles sont disponibles.",
   github: "https://github.com/salma-elidrissi",
   email: "salma.elidrissi@edu.uiz.ac.ma",
   linkedin: "https://www.linkedin.com/in/salma-el-idrissi-171911224/",
-  cv: "cv-salma.pdf"
+  cv: "cv-salma-ELIDRISSI.pdf"
 };
 
 /* Vos domaines d'expertise (modifiez librement les textes et les mots-clés).
@@ -132,11 +132,34 @@ var DOMAINES = [
 
 var PROJETS = [
   {
-    code: "OPT",
+    code: "OPTIONLAB",
     categorie: "Finance quantitative",
-    titre: "Pricing d’options : rapport, interface et code",
-    description: "Valorisation d’options et calcul de leurs sensibilités, avec un rapport détaillé et une interface interactive pour faire varier les paramètres.",
-    outils: ["Python", "Black-Scholes", "Monte Carlo"],
+    titre: "Pricing d’options V3: rapport, interface et code",
+    description: "Développement d’une application interactive sous Streamlit pour le pricing d’options européennes et américaines via les arbres binomiaux et trinomiaux, intégrant des données de marché en temps réel, avec analyse de la convergence numérique des prix et benchmark par rapport aux valeurs théoriques du modèle de Black-Scholes.",
+    outils: ["Python", "CRR et trinomial", "Black-Scholes"],
+    liens: [
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf" },
+      { texte: "Interface", url: "" },
+      { texte: "Code", url: "" }
+    ]
+  },
+  {
+    code: "QUANTLAB",
+    categorie: "Finance quantitative",
+    titre: "Pricing d’options V2: rapport, interface et code",
+    description: "Conception d'une application interactive sous Streamlit évaluant le juste prix des options financières à travers une approche comparative complète. Ce projet met en valeur l'utilité conjointe de la formule analytique de Black-Scholes, des méthodes stochastiques de simulation (Monte Carlo, Euler-Maruyama) et de modèles de Machine Learning (Gradient Boosting), offrant ainsi un outil d'aide à la décision ultra-rapide et performant pour le trading et la gestion des risques.",
+    outils: ["Python", "Euler Maruyama", "ML"],
+    liens: [
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf" },
+      { texte: "Interface", url: "" },
+      { texte: "Code", url: "" }
+    ]
+  },
+    {
+    code: "OptiPricer",
+    categorie: "Finance quantitative",
+    titre: "Pricing d’options V1: rapport, interface et code",
+    description: "Développement d’une plateforme interactive sous Streamlit dédiée à l'évaluation des options européennes et américaines. Ce projet implémente des modèles stochastiques sophistiqués (Mouvement Brownien Géométrique, Heston, Merton) ainsi que des méthodes numériques robustes (Monte Carlo avec réduction de variance et algorithme de Longstaff-Schwartz), offrant ainsi un outil d'aide à la décision performant et pédagogique pour la gestion des risques et la finance quantitative.",    outils: ["Python", "Monte Carlo", "Longstaff-Schwartz"],
     liens: [
       { texte: "Rapport", url: "" },
       { texte: "Interface", url: "" },
@@ -144,13 +167,13 @@ var PROJETS = [
     ]
   },
   {
-    code: "TAUX",
-    categorie: "Finance quantitative",
+    code: "Taux",
+    categorie: "Étude Économétrique--Machine Learning",
     titre: "Modélisation de l’impact des taux d’intérêt sur les décisions d’investissement au Maroc",
-    description: "Étude de la façon dont l’évolution des taux d’intérêt influence les choix d’investissement au Maroc, avec modélisation et analyse des résultats.",
-    outils: ["Modélisation", "Économétrie", "Séries temporelles"],
+    description: "Analyse et prévision de la Formation Brute de Capital (FBC) au Maroc à travers l’étude des relations de long terme entre les taux d’intérêt et les principaux agrégats macroéconomiques, à l’aide d’un modèle économétrique VECM et d’algorithmes de Machine Learning.",
+    outils: ["Eviews", "VECM", "XGBOOST"],
     liens: [
-      { texte: "Rapport", url: "" },
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf" },
       { texte: "Code", url: "" }
     ]
   },
@@ -161,7 +184,7 @@ var PROJETS = [
     description: "Modèle de machine learning qui estime le prix d’un billet d’avion à partir de ses caractéristiques, avec comparaison des modèles testés.",
     outils: ["Python", "Machine Learning", "Régression"],
     liens: [
-      { texte: "Rapport", url: "" },
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf" },
       { texte: "Code", url: "" }
     ]
   },
