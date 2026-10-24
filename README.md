@@ -56,7 +56,7 @@ C = S·N(d₁) − K·e^(−rT)·N(d₂)
 ```
 
 - **Méthodes :** *[Black-Scholes, Monte Carlo, arbre binomial… à adapter]*
-- **Outils :** `Python` `NumPy` `Pandas` *[Streamlit / autre pour l'interface]*
+- **Outils :** `Python` `NumPy` `Pandas` 
 - **Livrables :** [📄 Rapport](LIEN) · [🖥️ Interface en ligne](LIEN) · [💻 Code](LIEN)
 
 ---
@@ -66,9 +66,8 @@ C = S·N(d₁) − K·e^(−rT)·N(d₂)
 Modélisation de la façon dont l'évolution des taux d'intérêt influence les choix d'investissement au Maroc.
 
 - **Question de recherche :** une hausse des taux réduit-elle l'investissement ? *(∂I / ∂r < 0 ?)*
-- **Méthodes :** *[régression, séries temporelles, modèle économétrique… à adapter]*
-- **Données :** *[sources utilisées]*
-- **Outils :** `Python` / `R` *[à adapter]*
+- **Méthodes :VECM
+- **Outils :** `Python` / `R`  / `Eviews`
 - **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
 
 ---
@@ -95,7 +94,7 @@ argmin Σₖ Σ ‖x − μₖ‖²
 
 - **Méthodes :** Classification Ascendante Hiérarchique (dendrogramme) et K-means
 - **Démarche :** choix du nombre de classes, comparaison des deux méthodes, interprétation des segments
-- **Outils :** `Python` / `R` *[à adapter]*
+- **Outils : `Python` 
 - **Livrables :** [📄 Rapport](LIEN) · [💻 Code](LIEN)
 
 ---
@@ -116,8 +115,7 @@ argmin Σₖ Σ ‖x − μₖ‖²
 
 ## Formation
 
-- 🎓 **Cycle ingénieur, Finance et Ingénierie Décisionnelle**, *[École]* (*[année]* – présent)
-- 📘 *[Classes préparatoires / Licence]*, *[Établissement]*
+- 🎓 **Cycle ingénieur, Finance et Ingénierie Décisionnelle**, ENSA-A (2022 – présent)
 
 ---
 
