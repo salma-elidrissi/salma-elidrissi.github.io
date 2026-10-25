@@ -19,11 +19,11 @@ Finance Quantitative  · Actuariat · Risk Management · Data Science
 
 Bienvenue sur mon portfolio GitHub ! 
 
-Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me situe à la croisée de la finance (de marché et d'entreprise), de l'actuariat, des méthodes économétriques et de la science des données. À travers mes projets académiques et professionnels, je développe des compétences transversales allant de la valorisation d'actifs et l'analyse financière globale au risk management, jusqu'à la conception de modèles prédictifs et d'outils d'aide à la décision.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me situe à la croisée de la finance , de l'actuariat, des méthodes économétriques et de la science des données. À travers mes projets académiques et professionnels, je développe des compétences transversales allant de la valorisation d'actifs et l'analyse financière globale au risk management, jusqu'à la conception de modèles prédictifs et d'outils d'aide à la décision.
 
 * **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
 * **📍 Localisation :** Agadir, Maroc
-* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en **Finance (Quantitative, d'Entreprise ou de Marché), Gestion des Risques, Actuariat, Data Science / Business Intelligence ou Conseil Analyste**.
+* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027.
 
 ---
 
