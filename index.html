@@ -36,6 +36,7 @@ a{color:inherit}
 .q i{font-style:normal}.q .u{color:var(--up)}.q .d{color:var(--down)}
 @keyframes run{to{transform:translateX(-50%)}}
 
+/* En-tête */
 header.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 35px);z-index:19;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
 .logo{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.06em;text-decoration:none}
@@ -44,6 +45,7 @@ nav{display:flex;align-items:center;gap:6px}
 nav a,.tg{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:4px;border:1px solid transparent;background:none;cursor:pointer;transition:color .2s,border-color .2s}
 nav a:hover,.tg:hover{color:var(--acc);border-color:var(--line)}
 
+/* Hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding:64px 0 40px}
 .tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:5px 14px;margin-bottom:22px}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--up);animation:bl 1.6s ease-in-out infinite}
@@ -64,13 +66,16 @@ h1{font-weight:800;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacin
 .foot{display:flex;justify-content:space-between;padding:9px 14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted)}
 .foot .u{color:var(--up)}.foot .d{color:var(--down)}
 
+/* Séparation */
 .hero{margin-bottom:32px}
 
+/* Sections */
 section{margin-bottom:80px}
 .sh{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--line);padding-bottom:12px}
 .sh em{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--acc)}
 h2{font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin:0}
 
+/* Watchlist */
 .wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;transition:border-color .2s,transform .2s}
 .row:hover{border-color:var(--acc);transform:translateY(-2px)}
@@ -81,6 +86,7 @@ h2{font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin
 .kw{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
 .kw li{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 8px}
 
+/* Projets */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .ch{font-family:var(--mono);font-size:12.5px;background:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer;transition:color .2s,border-color .2s}
 .ch:hover{color:var(--ink);border-color:var(--muted)}
@@ -157,8 +163,9 @@ footer{border-top:1px solid var(--line);padding:22px 0 30px;font-family:var(--mo
 <div class="wrap"><footer id="pied"></footer></div>
 
 <script>
+/* ===================== ZONE À MODIFIER ===================== */
 var PROFIL = {
-  nom: "Salma El Idrissi",
+  nom: "Salma EL IDRISSI",
   titre: "Élève-ingénieure · Finance & Ingénierie décisionnelle",
   pfe: "Élève-ingénieure en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je recherche un Projet de Fin d’Études (PFE) pour mettre en pratique mes compétences techniques, contribuer à des projets à forte valeur ajoutée et approfondir mon expertise dans un environnement professionnel stimulant.",
   intro: "Ce portfolio rassemble les projets menés au cours de mon parcours d’ingénieur, avec les codes sources, les documentations techniques et les applications déployées en ligne lorsqu’elles sont disponibles.",
@@ -174,7 +181,7 @@ var DOMAINES = [
   { code: "ASS", titre: "Assurance", texte: "Modélisation actuarielle, tarification et provisionnement des risques.", mots: ["Actuariat", "Tarification", "Provisionnement"] },
   { code: "YLD", titre: "Courbe des taux", texte: "Structure par terme, construction de courbes et sensibilité des produits de taux.", mots: ["Zéro-coupon", "Duration", "Structure par terme"] },
   { code: "VAL", titre: "Valorisation", texte: "Évaluation d’options, de produits dérivés et d’actifs sous incertitude.", mots: ["Black-Scholes", "Monte Carlo", "Arbres"] },
-  { code: "ECO", titre: "Économétrie", texte: "Séries temporelles et relations de long terme entre variables économiques.", mots: ["modélisation", "Series temporelles", "Eviews"] },
+  { code: "ECO", titre: "Économétrie", texte: "Séries temporelles et relations de long terme entre variables économiques.", mots: ["modélisation", "Cointégration", "Eviews"] },
   { code: "MOD", titre: "Modélisation", texte: "Modèles stochastiques et numériques pour représenter l’incertitude des marchés.", mots: ["Heston", "Merton", "Euler-Maruyama"] },
   { code: "DS", titre: "Data science", texte: "Apprentissage automatique, classification et segmentation de données.", mots: ["Machine Learning", "CAH", "K-means"] }
 ];
@@ -231,7 +238,6 @@ var PROJETS = [
     titre: "Classification et segmentation de données par CAH et K-means",
     description: "Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.",
     outils: ["Python", "CAH", "K-means"],
-    ]
   },
   {
     code: "VOL",
