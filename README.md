@@ -59,7 +59,7 @@ Bienvenue sur mon portfolio GitHub !
     $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
   * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
 * **Stack :** Python, NumPy, Pandas, Streamlit.
-* **Livrables **: [ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · [ Application interactive](https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app/) · [ Code source Python](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py)
+* **Livrables **: [ Rapport](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · [ Application interactive](https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app/) · [ Code source Python](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py)
 ---
 
 ### TAUX — Impact des Taux d'Intérêt sur l'Investissement au Maroc
@@ -70,7 +70,7 @@ Bienvenue sur mon portfolio GitHub !
   * Analyse de stationnarité (tests ADF/PP) et de cointégration (Johansen).
   * Modélisation par Modèle Vectoriel à Correction d'Erreur (VECM) pour capturer les dynamiques de court et long terme.
 * **Stack :** Python, EViews.
-* **Livrables : [ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf) · [ Application interactive](https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/) · 
+* **Livrables :**[ Rapport](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf) · [ Application interactive](https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/) · 
 
 ---
 
@@ -79,7 +79,7 @@ Bienvenue sur mon portfolio GitHub !
 * **Objectif :** Estimer le prix des billets à partir des caractéristiques de vol via des algorithmes de régression.
 * **Méthodologies :** Nettoyage des données, Feature Engineering, comparaison des modèles (Régression Linéaire, Random Forest, XGBoost) et évaluation sur jeux de test.
 * **Stack :** Python, Pandas, Scikit-learn, XGBoost.
-* **Livrable :[ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf)
+* **Livrable :**[ Rapport ](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf)
 
 ---
 
