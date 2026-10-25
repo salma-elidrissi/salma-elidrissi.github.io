@@ -4,7 +4,7 @@
 
 **Élève Ingénieure en Finance & Ingénierie Décisionnelle**
 
-Finance Quantitative · Finance d'Entreprise · Actuariat · Risk Management · Data Science
+Finance Quantitative · Actuariat · Risk Management · Data Science
 
 <p align="center">
 <a href="https://www.linkedin.com/in/salma-el-idrissi-171911224/"><img src="https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -42,26 +42,7 @@ Bienvenue sur mon portfolio GitHub !
 
 ---
 
-## 💻 Stack Technique
 
-Programmation et analyse de données :
-<p>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
-<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL">
-</p>
-
-Outils de développement et déploiement :
-<p>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
-</p>
-
-* **Outils financiers et économétriques :** EViews, Excel (Modélisation avancée)
 
 ---
 
