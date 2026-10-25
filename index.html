@@ -98,14 +98,7 @@ footer{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;color:
 </div>
 
 <script>
-/* =====================================================================
-   ✏️  ZONE À MODIFIER : tout ce que vous devez changer est ICI.
-   - Un lien vide ("") n'apparaît pas sur la page.
-   - Pour ajouter un projet : copiez un bloc { ... }, collez-le à la suite
-     (virgule entre deux blocs) et changez les textes.
-   - "categorie" crée automatiquement un onglet de filtre.
-   - CV : déposez votre PDF dans le dépôt avec ce nom exact : cv-salma.pdf
-   ===================================================================== */
+
 var PROFIL = {
   nom: "Salma El Idrissi",
   titre: "Élève-ingénieur en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je suis actuellement à la recherche d’un Projet de Fin d’Études (PFE) me permettant de mettre en pratique mes compétences techniques, de contribuer à des projets à forte valeur ajoutée et d’approfondir mon expertise dans un environnement professionnel stimulant.",
@@ -115,9 +108,6 @@ var PROFIL = {
   linkedin: "https://www.linkedin.com/in/salma-el-idrissi-171911224/",
   cv: "cv-salma-ELIDRISSI.pdf"
 };
-
-/* Vos domaines d'expertise (modifiez librement les textes et les mots-clés).
-   couleur : c1 bleu, c2 turquoise, c3 or, c4 brique, c5 vert */
 var DOMAINES = [
   { titre: "Gestion des risques", couleur: "c4",
     texte: "Mesure et maîtrise des risques de marché, de crédit et de liquidité.",
@@ -161,9 +151,7 @@ var PROJETS = [
     titre: "Pricing d’options V1: rapport, interface et code",
     description: "Développement d’une plateforme interactive sous Streamlit dédiée à l'évaluation des options européennes et américaines. Ce projet implémente des modèles stochastiques sophistiqués (Mouvement Brownien Géométrique, Heston, Merton) ainsi que des méthodes numériques robustes (Monte Carlo avec réduction de variance et algorithme de Longstaff-Schwartz), offrant ainsi un outil d'aide à la décision performant et pédagogique pour la gestion des risques et la finance quantitative.",    outils: ["Python", "Monte Carlo", "Longstaff-Schwartz"],
     liens: [
-      { texte: "Rapport", url: "" },
-      { texte: "Interface", url: "" },
-      { texte: "Code", url: "" }
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/OptiPricer/rapport.pdf" },
     ]
   },
   {
