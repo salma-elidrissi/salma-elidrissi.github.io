@@ -58,7 +58,7 @@ Bienvenue sur mon portfolio GitHub !
     $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
   * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
 * **Stack :** Python, NumPy, Pandas, Streamlit.
-* **Livrables :** Rapport de pricing("https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf") · Application interactive · Code source.
+* **Livrables **: [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · Application interactive · Code source · Application interactive · Code source.
 
 ---
 
