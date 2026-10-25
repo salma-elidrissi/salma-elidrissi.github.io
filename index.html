@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr" data-theme="dark">
 <head>
@@ -5,348 +6,1619 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Salma EL IDRISSI · Portfolio</title>
 <meta name="description" content="Portfolio de Salma EL IDRISSI, élève-ingénieure en finance et ingénierie décisionnelle.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  --bg:#f5f4ef;--panel:#ffffff;--ink:#14181c;--muted:#5b6670;--line:#d9d6cb;--soft:#ecebe4;
-  --acc:#a85f00;--acc-ink:#ffffff;--up:#0a8f5a;--down:#c62828;--blue:#1f62b5;
+:root {
+  --bg:#f5f4ef;
+  --panel:#ffffff;
+  --ink:#14181c;
+  --muted:#5b6670;
+  --line:#d9d6cb;
+  --soft:#ecebe4;
+  --acc:#a85f00;
+  --acc-ink:#ffffff;
+  --up:#0a8f5a;
+  --down:#c62828;
+  --blue:#1f62b5;
   --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#07090b;--panel:#0e1216;--ink:#e6e9ec;--muted:#8b96a1;--line:#1d262e;--soft:#141a20;--acc:#ffb000;--acc-ink:#0a0c0e;--up:#19c37d;--down:#ff4d4f;--blue:#4da3ff}
-}
-:root[data-theme="dark"]{--bg:#07090b;--panel:#0e1216;--ink:#e6e9ec;--muted:#8b96a1;--line:#1d262e;--soft:#141a20;--acc:#ffb000;--acc-ink:#0a0c0e;--up:#19c37d;--down:#ff4d4f;--blue:#4da3ff}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 
-/* Bandeau de cotations */
-.tape{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:1px solid var(--line);overflow:hidden;font-family:var(--mono);font-size:12px}
-.track{display:flex;width:max-content;animation:run 100s linear infinite}
-.tape:hover .track{animation-play-state:paused}
-.q{display:flex;gap:8px;padding:9px 20px;white-space:nowrap;border-right:1px solid var(--line)}
-.q b{color:var(--acc);font-weight:600;letter-spacing:.04em}
-.q i{font-style:normal}.q .u{color:var(--up)}.q .d{color:var(--down)}
-@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#07090b;
+    --panel:#0e1216;
+    --ink:#e6e9ec;
+    --muted:#8b96a1;
+    --line:#1d262e;
+    --soft:#141a20;
+    --acc:#ffb000;
+    --acc-ink:#0a0c0e;
+    --up:#19c37d;
+    --down:#ff4d4f;
+    --blue:#4da3ff;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg:#07090b;
+  --panel:#0e1216;
+  --ink:#e6e9ec;
+  --muted:#8b96a1;
+  --line:#1d262e;
+  --soft:#141a20;
+  --acc:#ffb000;
+  --acc-ink:#0a0c0e;
+  --up:#19c37d;
+  --down:#ff4d4f;
+  --blue:#4da3ff;
+}
+
+*,*::before,*::after {
+  box-sizing:inherit;
+}
+
+html {
+  scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px);
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+}
+
+a { color:inherit; }
+
+:focus-visible {
+  outline:2px solid var(--acc);
+  outline-offset:3px;
+}
+
+.wrap {
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* Barre de cotations défilante */
+.tape {
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:20;
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  font-family:var(--mono);
+  font-size:12px;
+}
+
+.track {
+  display:flex;
+  width:max-content;
+  animation:run 100s linear infinite;
+  will-change:transform;
+}
+
+.tape:hover .track {
+  animation-play-state:paused;
+}
+
+.q {
+  display:flex;
+  gap:8px;
+  padding:9px 20px;
+  white-space:nowrap;
+  border-right:1px solid var(--line);
+}
+
+.q b {
+  color:var(--acc);
+  font-weight:600;
+  letter-spacing:.04em;
+}
+
+.q i { font-style:normal; }
+.q .u { color:var(--up); }
+.q .d { color:var(--down); }
+
+@keyframes run {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
 
 /* En-tête */
-header.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 35px);z-index:19;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
-.logo{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.06em;text-decoration:none}
-.logo span{color:var(--acc)}
-nav{display:flex;align-items:center;gap:6px}
-nav a,.tg{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:4px;border:1px solid transparent;background:none;cursor:pointer;transition:color .2s,border-color .2s}
-nav a:hover,.tg:hover{color:var(--acc);border-color:var(--line)}
+header.top {
+  position:sticky;
+  top:calc(env(safe-area-inset-top,0px) + 35px);
+  z-index:19;
+  background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding:64px 0 40px}
-.tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:5px 14px;margin-bottom:22px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--up);animation:bl 1.6s ease-in-out infinite}
-@keyframes bl{50%{opacity:.2}}
-h1{font-weight:800;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.03em;margin:0 0 14px}
-.role{font-family:var(--mono);font-size:15px;color:var(--acc);margin:0 0 18px}
-.lead{color:var(--muted);max-width:56ch;margin:0 0 14px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.b1,.b2{display:inline-block;font-family:var(--mono);font-size:13px;font-weight:600;text-decoration:none;padding:11px 20px;border-radius:4px;transition:transform .2s,color .2s,border-color .2s}
-.b1{background:var(--acc);color:var(--acc-ink);border:1px solid var(--acc)}
-.b2{border:1px solid var(--line);color:var(--ink)}
-.b1:hover,.b2:hover{transform:translateY(-2px)}
-.b2:hover{border-color:var(--acc);color:var(--acc)}
-.term{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.bar{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--soft)}
-.bar b{color:var(--acc);font-weight:600}
-#mc{display:block;width:100%;height:260px}
-.foot{display:flex;justify-content:space-between;padding:9px 14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted)}
-.foot .u{color:var(--up)}.foot .d{color:var(--down)}
+header.top .wrap {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  height:56px;
+}
 
-/* Séparation */
-.hero{margin-bottom:32px}
+.logo {
+  font-family:var(--mono);
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.06em;
+  text-decoration:none;
+}
+
+.logo span { color:var(--acc); }
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+nav a,.tg {
+  font-family:var(--mono);
+  font-size:12.5px;
+  text-decoration:none;
+  color:var(--muted);
+  padding:6px 12px;
+  border-radius:4px;
+  border:1px solid transparent;
+  background:none;
+  cursor:pointer;
+  transition:color .2s,border-color .2s;
+}
+
+nav a:hover,.tg:hover {
+  color:var(--acc);
+  border-color:var(--line);
+}
+
+/* Présentation */
+.hero {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:48px;
+  align-items:center;
+  padding:64px 0 40px;
+  margin-bottom:32px;
+}
+
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--acc);
+  border:1px solid var(--acc);
+  border-radius:999px;
+  padding:5px 14px;
+  margin-bottom:22px;
+}
+
+.dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--up);
+  animation:bl 1.6s ease-in-out infinite;
+}
+
+@keyframes bl {
+  50% { opacity:.2; }
+}
+
+h1 {
+  font-weight:800;
+  font-size:clamp(40px,6vw,68px);
+  line-height:1.02;
+  letter-spacing:-.03em;
+  margin:0 0 14px;
+  overflow-wrap:anywhere;
+}
+
+.role {
+  font-family:var(--mono);
+  font-size:15px;
+  color:var(--acc);
+  margin:0 0 18px;
+}
+
+.lead {
+  color:var(--muted);
+  max-width:56ch;
+  margin:0 0 14px;
+}
+
+.cta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:26px;
+}
+
+.b1,.b2 {
+  display:inline-block;
+  font-family:var(--mono);
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  padding:11px 20px;
+  border-radius:4px;
+  transition:transform .2s,color .2s,border-color .2s;
+}
+
+.b1 {
+  background:var(--acc);
+  color:var(--acc-ink);
+  border:1px solid var(--acc);
+}
+
+.b2 {
+  border:1px solid var(--line);
+  color:var(--ink);
+}
+
+.b1:hover,.b2:hover {
+  transform:translateY(-2px);
+}
+
+.b2:hover {
+  border-color:var(--acc);
+  color:var(--acc);
+}
+
+/* Graphique */
+.term {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  min-width:0;
+}
+
+.bar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:9px 14px;
+  border-bottom:1px solid var(--line);
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--muted);
+  background:var(--soft);
+}
+
+.bar b {
+  color:var(--acc);
+  font-weight:600;
+}
+
+#mc {
+  display:block;
+  width:100%;
+  height:260px;
+}
+
+.foot {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:9px 14px;
+  border-top:1px solid var(--line);
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--muted);
+}
+
+.foot .u { color:var(--up); }
+.foot .d { color:var(--down); }
 
 /* Sections */
-section{margin-bottom:80px}
-.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--line);padding-bottom:12px}
-.sh em{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--acc)}
-h2{font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin:0}
+section { margin-bottom:80px; }
 
-/* Watchlist */
-.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;transition:border-color .2s,transform .2s}
-.row:hover{border-color:var(--acc);transform:translateY(-2px)}
-.sym{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--acc-ink);background:var(--acc);border-radius:4px;height:fit-content;text-align:center;padding:6px 0}
-.row h3{margin:0 0 4px;font-size:17px;display:flex;justify-content:space-between;gap:10px}
-.row h3 i{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--up)}
-.row p{margin:0 0 10px;color:var(--muted);font-size:14.5px;line-height:1.5}
-.kw{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
-.kw li{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 8px}
+.sh {
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin-bottom:26px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;
+}
+
+.sh em {
+  font-family:var(--mono);
+  font-style:normal;
+  font-size:12px;
+  color:var(--acc);
+}
+
+h2 {
+  font-weight:800;
+  font-size:clamp(26px,3.4vw,36px);
+  letter-spacing:-.02em;
+  margin:0;
+}
+
+/* Domaines d'expertise */
+.wl {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.row {
+  display:grid;
+  grid-template-columns:64px minmax(0,1fr);
+  gap:16px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:18px;
+  transition:border-color .2s,transform .2s;
+}
+
+.row:hover {
+  border-color:var(--acc);
+  transform:translateY(-2px);
+}
+
+.sym {
+  font-family:var(--mono);
+  font-weight:600;
+  font-size:13px;
+  color:var(--acc-ink);
+  background:var(--acc);
+  border-radius:4px;
+  height:fit-content;
+  text-align:center;
+  padding:6px 0;
+}
+
+.row h3 {
+  margin:0 0 4px;
+  font-size:17px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.row h3 i {
+  font-family:var(--mono);
+  font-style:normal;
+  font-size:12px;
+  color:var(--up);
+}
+
+.row p {
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.5;
+}
+
+.kw {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.kw li {
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:1px 8px;
+}
 
 /* Projets */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.ch{font-family:var(--mono);font-size:12.5px;background:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer;transition:color .2s,border-color .2s}
-.ch:hover{color:var(--ink);border-color:var(--muted)}
-.ch[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px;transition:border-color .2s,transform .2s}
-.card:hover{border-color:var(--acc);transform:translateY(-3px)}
-.card[hidden]{display:none}
-.cm{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;margin-bottom:12px}
-.cm b{color:var(--acc)}.cm span{color:var(--muted)}
-.card h3{margin:0 0 10px;font-size:20px;line-height:1.25;letter-spacing:-.01em}
-.card p{margin:0 0 16px;color:var(--muted);font-size:14.5px;line-height:1.6;flex:1}
-.tl{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 18px;padding:0}
-.tl li{font-family:var(--mono);font-size:11.5px;color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,transparent);border-radius:3px;padding:2px 9px}
-.acts{display:flex;flex-wrap:wrap;gap:8px}
-.lk{font-family:var(--mono);font-size:12.5px;font-weight:600;text-decoration:none;padding:7px 14px;border-radius:4px;border:1px solid var(--line);transition:background .2s,color .2s,border-color .2s}
-.lk:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.chips {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:22px;
+}
+
+.ch {
+  font-family:var(--mono);
+  font-size:12.5px;
+  background:none;
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:6px 16px;
+  cursor:pointer;
+  transition:color .2s,border-color .2s;
+}
+
+.ch:hover {
+  color:var(--ink);
+  border-color:var(--muted);
+}
+
+.ch[aria-pressed="true"] {
+  background:var(--acc);
+  border-color:var(--acc);
+  color:var(--acc-ink);
+  font-weight:600;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+
+.card {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:24px;
+  transition:border-color .2s,transform .2s;
+}
+
+.card:hover {
+  border-color:var(--acc);
+  transform:translateY(-3px);
+}
+
+.card[hidden] { display:none; }
+
+.cm {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-family:var(--mono);
+  font-size:11.5px;
+  letter-spacing:.06em;
+  margin-bottom:12px;
+}
+
+.cm b { color:var(--acc); }
+.cm span { color:var(--muted); }
+
+.card h3 {
+  margin:0 0 10px;
+  font-size:20px;
+  line-height:1.25;
+  letter-spacing:-.01em;
+}
+
+.card p {
+  margin:0 0 16px;
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.6;
+  flex:1;
+}
+
+.tl {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  list-style:none;
+  margin:0 0 18px;
+  padding:0;
+}
+
+.tl li {
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--blue);
+  background:color-mix(in srgb,var(--blue) 12%,transparent);
+  border-radius:3px;
+  padding:2px 9px;
+}
+
+.acts {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.lk {
+  font-family:var(--mono);
+  font-size:12.5px;
+  font-weight:600;
+  text-decoration:none;
+  padding:7px 14px;
+  border-radius:4px;
+  border:1px solid var(--line);
+  transition:background .2s,color .2s,border-color .2s;
+  overflow-wrap:anywhere;
+}
+
+.lk:hover {
+  background:var(--acc);
+  border-color:var(--acc);
+  color:var(--acc-ink);
+}
 
 /* Contact */
-.ct{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
-.ct h3{margin:0 0 6px;font-size:24px}.ct p{margin:0;color:var(--muted)}
-.ct ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
-footer{border-top:1px solid var(--line);padding:22px 0 30px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.ct {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:34px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:22px;
+}
 
-@media (max-width:900px){.hero{grid-template-columns:1fr;gap:32px;padding-top:40px}.wl,.grid{grid-template-columns:1fr}nav a:not(.keep){display:none}}
-@media (prefers-reduced-motion: reduce){.track,.dot{animation:none}.row,.card,.b1,.b2,.ch,.lk{transition:none}html{scroll-behavior:auto}}
+.ct h3 {
+  margin:0 0 6px;
+  font-size:24px;
+}
+
+.ct p {
+  margin:0;
+  color:var(--muted);
+}
+
+.ct ul {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+footer {
+  border-top:1px solid var(--line);
+  padding:22px 0 30px;
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media (max-width:900px) {
+  .hero {
+    grid-template-columns:1fr;
+    gap:32px;
+    padding-top:40px;
+  }
+
+  .wl,.grid { grid-template-columns:1fr; }
+
+  nav a:not(.keep) { display:none; }
+}
+
+@media (max-width:520px) {
+  .wrap { padding:0 16px; }
+
+  .hero { gap:24px; }
+
+  .row {
+    grid-template-columns:52px minmax(0,1fr);
+    gap:12px;
+    padding:14px;
+  }
+
+  .card { padding:18px; }
+
+  .ct { padding:22px; }
+
+  .bar { font-size:10px; }
+
+  .foot { font-size:10.5px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .track,.dot { animation:none; }
+
+  .row,.card,.b1,.b2,.ch,.lk { transition:none; }
+
+  html { scroll-behavior:auto; }
+}
 </style>
 </head>
+
 <body>
-<div class="tape" aria-hidden="true"><div class="track" id="track"></div></div>
-<header class="top"><div class="wrap">
-  <a class="logo" href="#haut" id="logo"></a>
-  <nav aria-label="Navigation">
-    <a href="#expertise">Expertise</a><a href="#projets">Projets</a><a href="#contact" class="keep">Contact</a>
-    <button class="tg" id="tg" type="button" aria-label="Changer de thème">◐ Thème</button>
-  </nav>
-</div></header>
+
+<!-- Barre de cotations -->
+<div class="tape" aria-label="Indicateurs de marché simulés">
+  <div class="track" id="track"></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#haut" id="logo"></a>
+
+    <nav aria-label="Navigation principale">
+      <a href="#expertise">Expertise</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact" class="keep">Contact</a>
+      <button class="tg" id="tg" type="button" aria-label="Changer de thème">◐ Thème</button>
+    </nav>
+  </div>
+</header>
 
 <main class="wrap" id="haut">
+
   <div class="hero">
     <div>
-      <span class="tag"><span class="dot"></span>Ouverte à un PFE</span>
+      <span class="tag">
+        <span class="dot"></span>
+        Ouverte à un PFE
+      </span>
+
       <h1 id="nom"></h1>
       <p class="role" id="titre"></p>
       <p class="lead" id="pfe"></p>
       <p class="lead" id="intro"></p>
       <div class="cta" id="cta"></div>
     </div>
-    <div class="term" aria-hidden="true">
-      <div class="bar"><b>S.ELIDRISSI &lt;GO&gt;</b><span>Marché simulé · temps réel</span></div>
+
+    <div class="term" aria-label="Graphique de marché simulé">
+      <div class="bar">
+        <b>S.ELIDRISSI &lt;GO&gt;</b>
+        <span>Marché simulé</span>
+      </div>
+
       <canvas id="mc"></canvas>
-      <div class="foot"><span id="px">—</span><span id="chg">—</span></div>
+
+      <div class="foot">
+        <span id="px">—</span>
+        <span id="chg">—</span>
+      </div>
     </div>
   </div>
 
   <section id="expertise">
-    <div class="sh"><em>01</em><h2>Domaines d’expertise</h2></div>
+    <div class="sh">
+      <em>01</em>
+      <h2>Domaines d’expertise</h2>
+    </div>
     <div class="wl" id="doms"></div>
   </section>
 
   <section id="projets">
-    <div class="sh"><em>02</em><h2>Projets académiques</h2></div>
+    <div class="sh">
+      <em>02</em>
+      <h2>Projets académiques</h2>
+    </div>
+
     <div class="chips" id="filtres" role="group" aria-label="Filtrer les projets"></div>
     <div class="grid" id="liste"></div>
   </section>
 
   <section id="contact">
+    <div class="sh">
+      <em>03</em>
+      <h2>Contact</h2>
+    </div>
+
     <div class="ct">
-      <div><h3>Mes coordonnées</h3><p>Disponible pour un Projet de Fin d’Études.</p></div>
+      <div>
+        <h3>Mes coordonnées</h3>
+        <p>Disponible pour un Projet de Fin d’Études.</p>
+      </div>
       <ul id="coord"></ul>
     </div>
   </section>
+
 </main>
-<div class="wrap"><footer id="pied"></footer></div>
+
+<div class="wrap">
+  <footer id="pied"></footer>
+</div>
 
 <script>
-/* ===================== ZONE À MODIFIER ===================== */
+"use strict";
+
+/* =========================================================
+   ZONE À MODIFIER : INFORMATIONS PERSONNELLES ET PROJETS
+   ========================================================= */
+
 var PROFIL = {
   nom: "Salma EL IDRISSI",
+
   titre: "Élève-ingénieure · Finance & Ingénierie décisionnelle",
+
   pfe: "Élève-ingénieure en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je recherche un Projet de Fin d’Études (PFE) pour mettre en pratique mes compétences techniques, contribuer à des projets à forte valeur ajoutée et approfondir mon expertise dans un environnement professionnel stimulant.",
+
   intro: "Ce portfolio rassemble les projets menés au cours de mon parcours d’ingénieur, avec les codes sources, les documentations techniques et les applications déployées en ligne lorsqu’elles sont disponibles.",
+
   github: "https://github.com/salma-elidrissi",
+
   email: "salma.elidrissi@edu.uiz.ac.ma",
+
   linkedin: "https://www.linkedin.com/in/salma-el-idrissi-171911224/",
+
   cv: "cv-salma-ELIDRISSI.pdf"
 };
 
 var DOMAINES = [
-  { code: "PTF", titre: "Gestion de portefeuille", texte: "Allocation d’actifs, diversification et arbitrage rendement-risque.", mots: ["Markowitz", "Sharpe", "Allocation"] },
-  { code: "RSK", titre: "Gestion des risques", texte: "Mesure et maîtrise des risques de marché, de crédit et de liquidité.", mots: ["VaR", "Volatilité", "Stress tests"] },
-  { code: "ASS", titre: "Assurance", texte: "Modélisation actuarielle, tarification et provisionnement des risques.", mots: ["Actuariat", "Tarification", "Provisionnement"] },
-  { code: "YLD", titre: "Courbe des taux", texte: "Structure par terme, construction de courbes et sensibilité des produits de taux.", mots: ["Zéro-coupon", "Duration", "Structure par terme"] },
-  { code: "VAL", titre: "Valorisation", texte: "Évaluation d’options, de produits dérivés et d’actifs sous incertitude.", mots: ["Black-Scholes", "Monte Carlo", "Arbres"] },
-  { code: "ECO", titre: "Économétrie", texte: "Séries temporelles et relations de long terme entre variables économiques.", mots: ["modélisation", "Cointégration", "Eviews"] },
-  { code: "MOD", titre: "Modélisation", texte: "Modèles stochastiques et numériques pour représenter l’incertitude des marchés.", mots: ["Heston", "Merton", "Euler-Maruyama"] },
-  { code: "DS", titre: "Data science", texte: "Apprentissage automatique, classification et segmentation de données.", mots: ["Machine Learning", "CAH", "K-means"] }
+  {
+    code:"PTF",
+    titre:"Gestion de portefeuille",
+    texte:"Allocation d’actifs, diversification et arbitrage rendement-risque.",
+    mots:["Markowitz","Sharpe","Allocation"]
+  },
+  {
+    code:"RSK",
+    titre:"Gestion des risques",
+    texte:"Mesure et maîtrise des risques de marché, de crédit et de liquidité.",
+    mots:["VaR","Volatilité","Stress tests"]
+  },
+  {
+    code:"ASS",
+    titre:"Assurance",
+    texte:"Modélisation actuarielle, tarification et provisionnement des risques.",
+    mots:["Actuariat","Tarification","Provisionnement"]
+  },
+  {
+    code:"YLD",
+    titre:"Courbe des taux",
+    texte:"Structure par terme, construction de courbes et sensibilité des produits de taux.",
+    mots:["Zéro-coupon","Duration","Structure par terme"]
+  },
+  {
+    code:"VAL",
+    titre:"Valorisation",
+    texte:"Évaluation d’options, de produits dérivés et d’actifs sous incertitude.",
+    mots:["Black-Scholes","Monte Carlo","Arbres"]
+  },
+  {
+    code:"ECO",
+    titre:"Économétrie",
+    texte:"Séries temporelles et relations de long terme entre variables économiques.",
+    mots:["Modélisation","Cointégration","EViews"]
+  },
+  {
+    code:"MOD",
+    titre:"Modélisation",
+    texte:"Modèles stochastiques et numériques pour représenter l’incertitude des marchés.",
+    mots:["Heston","Merton","Euler-Maruyama"]
+  },
+  {
+    code:"DS",
+    titre:"Data science",
+    texte:"Apprentissage automatique, classification et segmentation de données.",
+    mots:["Machine Learning","CAH","K-means"]
+  }
 ];
 
 var PROJETS = [
   {
-    code: "OPTIONLAB",
-    categorie: "Finance quantitative",
-    titre: "Pricing d’options V3 : rapport, interface et code",
-    description: "Développement d’une application interactive sous Streamlit pour le pricing d’options européennes et américaines via les arbres binomiaux et trinomiaux, intégrant des données de marché en temps réel, avec analyse de la convergence numérique des prix et benchmark par rapport aux valeurs théoriques du modèle de Black-Scholes.",
-    outils: ["Python", "CRR et trinomial", "Black-Scholes"],
-    liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf" },
-      { texte: "Code", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py" },
-      { texte: "Interface", url: "https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app" }
+    code:"OPTIONLAB",
+    categorie:"Finance quantitative",
+    titre:"Pricing d’options V3 : rapport, interface et code",
+    description:"Développement d’une application interactive sous Streamlit pour le pricing d’options européennes et américaines via les arbres binomiaux et trinomiaux, intégrant des données de marché lorsqu’elles sont disponibles, avec analyse de la convergence numérique des prix et comparaison avec le modèle de Black-Scholes.",
+    outils:["Python","CRR et trinomial","Black-Scholes"],
+    liens:[
+      {
+        texte:"Rapport",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf"
+      },
+      {
+        texte:"Code",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py"
+      },
+      {
+        texte:"Interface",
+        url:"https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app"
+      }
     ]
   },
+
   {
-    code: "QUANTLAB",
-    categorie: "Finance quantitative",
-    titre: "Pricing d’options V2 : rapport, interface et code",
-    description: "Conception d’une application interactive sous Streamlit évaluant le juste prix des options financières par une approche comparative : formule analytique de Black-Scholes, méthodes stochastiques de simulation (Monte Carlo, Euler-Maruyama) et modèles de Machine Learning (Gradient Boosting), pour un outil d’aide à la décision rapide et performant en trading et gestion des risques.",
-    outils: ["Python", "Euler-Maruyama", "ML"],
-    liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf" },
-      { texte: "Code", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf" },
-      { texte: "Interface", url: "https://salma-elidrissiappio-hrwwgxy57jjgdpxxje2k3c.streamlit.app/" }
+    code:"QUANTLAB",
+    categorie:"Finance quantitative",
+    titre:"Pricing d’options V2 : rapport, interface et code",
+    description:"Conception d’une application interactive sous Streamlit évaluant le juste prix des options financières par une approche comparative : formule analytique de Black-Scholes, simulation de Monte Carlo, méthode d’Euler-Maruyama et modèles de Machine Learning.",
+    outils:["Python","Euler-Maruyama","Machine Learning"],
+    liens:[
+      {
+        texte:"Rapport",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf"
+      },
+      {
+        texte:"Code",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/tree/main/Quant_Pricing"
+      },
+      {
+        texte:"Interface",
+        url:"https://salma-elidrissiappio-hrwwgxy57jjgdpxxje2k3c.streamlit.app/"
+      }
     ]
   },
+
   {
-    code: "OPTIPRICER",
-    categorie: "Finance quantitative",
-    titre: "Pricing d’options V1 : rapport, interface et code",
-    description: "Développement d’une plateforme interactive sous Streamlit dédiée à l’évaluation des options européennes et américaines. Le projet implémente des modèles stochastiques (mouvement brownien géométrique, Heston, Merton) et des méthodes numériques robustes (Monte Carlo avec réduction de variance, algorithme de Longstaff-Schwartz), pour un outil à la fois performant et pédagogique.",
-    outils: ["Python", "Monte Carlo", "Longstaff-Schwartz"],
-    liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/OptiPricer/rapport.pdf" }
+    code:"OPTIPRICER",
+    categorie:"Finance quantitative",
+    titre:"Pricing d’options V1 : rapport, interface et code",
+    description:"Développement d’une plateforme interactive sous Streamlit dédiée à l’évaluation des options européennes et américaines. Le projet explore des modèles stochastiques et des méthodes numériques de valorisation, notamment Monte Carlo et Longstaff-Schwartz.",
+    outils:["Python","Monte Carlo","Longstaff-Schwartz"],
+    liens:[
+      {
+        texte:"Rapport",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/OptiPricer/rapport.pdf"
+      }
     ]
   },
+
   {
-    code: "TAUX",
-    categorie: "Économétrie & ML",
-    titre: "Impact des taux d’intérêt sur les décisions d’investissement au Maroc",
-    description: "Analyse et prévision de la Formation Brute de Capital (FBC) au Maroc à travers l’étude des relations de long terme entre les taux d’intérêt et les principaux agrégats macroéconomiques, à l’aide d’un modèle économétrique VECM et d’algorithmes de Machine Learning.",
-    outils: ["Eviews", "VECM", "XGBoost"],
-    liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf" },
-      { texte: "Interface", url: "https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/" }
+    code:"TAUX",
+    categorie:"Économétrie & ML",
+    titre:"Impact des taux d’intérêt sur les décisions d’investissement au Maroc",
+    description:"Analyse et prévision de la Formation Brute de Capital (FBC) au Maroc à travers l’étude des relations de long terme entre les taux d’intérêt et les principaux agrégats macroéconomiques, à l’aide d’un modèle économétrique VECM et d’algorithmes de Machine Learning.",
+    outils:["EViews","VECM","XGBoost"],
+    liens:[
+      {
+        texte:"Rapport",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf"
+      },
+      {
+        texte:"Interface",
+        url:"https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/"
+      }
     ]
   },
+
   {
-    code: "SEG",
-    categorie: "Data science",
-    titre: "Classification et segmentation de données par CAH et K-means",
-    description: "Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.",
-    outils: ["Python", "CAH", "K-means"],
+    code:"SEG",
+    categorie:"Data science",
+    titre:"Classification et segmentation de données par CAH et K-means",
+    description:"Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.",
+    outils:["Python","CAH","K-means"],
+    liens:[]
   },
+
   {
-    code: "VOL",
-    categorie: "Data science",
-    titre: "Prédiction des prix des vols",
-    description: "Modèle de machine learning qui estime le prix d’un billet d’avion à partir de ses caractéristiques, avec comparaison des modèles testés.",
-    outils: ["Python", "Machine Learning", "Régression"],
-    liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf" }
+    code:"VOL",
+    categorie:"Data science",
+    titre:"Prédiction des prix des vols",
+    description:"Modèle de Machine Learning qui estime le prix d’un billet d’avion à partir de ses caractéristiques, avec comparaison des modèles testés.",
+    outils:["Python","Machine Learning","Régression"],
+    liens:[
+      {
+        texte:"Rapport",
+        url:"https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf"
+      }
     ]
   }
 ];
 
-(function(){
-  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
-  function lien(x,u,c){var a=el('a',c,x);a.href=u;if(/^https?:/.test(u)){a.target='_blank';a.rel='noopener'}return a}
-  function $(i){return document.getElementById(i)}
-  function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%9973;return h}
-  function cotation(s){var h=hash(s),v=((h%380)+8)/100,up=h%3!==1;return {up:up,txt:(up?'+':'−')+v.toFixed(2).replace('.',',')+' %'}}
 
-  document.title=PROFIL.nom+" · Portfolio";
-  $('nom').textContent=PROFIL.nom;$('titre').textContent=PROFIL.titre;$('pfe').textContent=PROFIL.pfe;$('intro').textContent=PROFIL.intro;
-  var lg=$('logo');lg.appendChild(document.createTextNode(PROFIL.nom.split(' ')[0].toUpperCase()+'.'));lg.appendChild(el('span','','EI'));
+/* =========================================================
+   FONCTIONS UTILITAIRES
+   ========================================================= */
 
-  var cta=$('cta');
-  cta.appendChild(lien('Voir les projets','#projets','b1'));
-  if(PROFIL.cv)cta.appendChild(lien('Télécharger le CV',PROFIL.cv,'b2'));
-  [["LinkedIn",PROFIL.linkedin],["GitHub",PROFIL.github],["Email",PROFIL.email?"mailto:"+PROFIL.email:""]].forEach(function(c,i){
-    if(!c[1])return;var li=el('li');li.appendChild(lien(c[0],c[1],i===0?'b1':'b2'));$('coord').appendChild(li);
+(function() {
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+
+    if (className) {
+      node.className = className;
+    }
+
+    if (text !== undefined && text !== null) {
+      node.textContent = text;
+    }
+
+    return node;
+  }
+
+  function lien(text, url, className) {
+    var a = el("a", className, text);
+
+    a.href = url;
+
+    if (/^https?:\/\//i.test(url)) {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    }
+
+    return a;
+  }
+
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  function hash(str) {
+    var h = 7;
+
+    for (var i = 0; i < str.length; i++) {
+      h = (h * 31 + str.charCodeAt(i)) % 9973;
+    }
+
+    return h;
+  }
+
+  function cotation(str) {
+    var h = hash(str);
+    var variation = ((h % 380) + 8) / 100;
+    var up = h % 3 !== 1;
+
+    return {
+      up:up,
+      txt:(up ? "+" : "−") +
+        variation.toFixed(2).replace(".", ",") + " %"
+    };
+  }
+
+
+  /* =========================================================
+     PROFIL ET NAVIGATION
+     ========================================================= */
+
+  document.title = PROFIL.nom + " · Portfolio";
+
+  $("nom").textContent = PROFIL.nom;
+  $("titre").textContent = PROFIL.titre;
+  $("pfe").textContent = PROFIL.pfe;
+  $("intro").textContent = PROFIL.intro;
+
+  var logo = $("logo");
+
+  logo.appendChild(
+    document.createTextNode(
+      PROFIL.nom.split(" ")[0].toUpperCase() + "."
+    )
+  );
+
+  logo.appendChild(el("span", "", "EI"));
+
+
+  /* Boutons de présentation */
+
+  var cta = $("cta");
+
+  cta.appendChild(
+    lien("Voir les projets", "#projets", "b1")
+  );
+
+  if (PROFIL.cv) {
+    cta.appendChild(
+      lien("Télécharger le CV", PROFIL.cv, "b2")
+    );
+  }
+
+
+  /* Coordonnées */
+
+  [
+    ["LinkedIn", PROFIL.linkedin],
+    ["GitHub", PROFIL.github],
+    [
+      "Email",
+      PROFIL.email ? "mailto:" + PROFIL.email : ""
+    ]
+  ].forEach(function(item, index) {
+
+    if (!item[1]) return;
+
+    var li = el("li");
+
+    li.appendChild(
+      lien(
+        item[0],
+        item[1],
+        index === 0 ? "b1" : "b2"
+      )
+    );
+
+    $("coord").appendChild(li);
   });
 
-  DOMAINES.forEach(function(d){
-    var r=el('article','row');r.appendChild(el('div','sym',d.code));
-    var b=el('div'),h=el('h3','',d.titre);h.appendChild(el('i','','▲'));
-    b.appendChild(h);b.appendChild(el('p','',d.texte));
-    var u=el('ul','kw');d.mots.forEach(function(m){u.appendChild(el('li','',m))});b.appendChild(u);
-    r.appendChild(b);$('doms').appendChild(r);
+
+  /* =========================================================
+     DOMAINES D'EXPERTISE
+     ========================================================= */
+
+  DOMAINES.forEach(function(domaine) {
+
+    var article = el("article", "row");
+
+    article.appendChild(
+      el("div", "sym", domaine.code)
+    );
+
+    var contenu = el("div");
+
+    var titre = el("h3", "", domaine.titre);
+
+    titre.appendChild(
+      el("i", "", "▲")
+    );
+
+    contenu.appendChild(titre);
+
+    contenu.appendChild(
+      el("p", "", domaine.texte)
+    );
+
+    var mots = el("ul", "kw");
+
+    domaine.mots.forEach(function(mot) {
+      mots.appendChild(
+        el("li", "", mot)
+      );
+    });
+
+    contenu.appendChild(mots);
+    article.appendChild(contenu);
+
+    $("doms").appendChild(article);
   });
 
-  var cats=[];PROJETS.forEach(function(p){if(cats.indexOf(p.categorie)<0)cats.push(p.categorie)});
-  PROJETS.forEach(function(p){
-    var c=el('article','card');c.setAttribute('data-cat',p.categorie);
-    var m=el('div','cm');m.appendChild(el('b','',p.code));m.appendChild(el('span','',p.categorie));c.appendChild(m);
-    c.appendChild(el('h3','',p.titre));c.appendChild(el('p','',p.description));
-    var t=el('ul','tl');p.outils.forEach(function(o){t.appendChild(el('li','',o))});c.appendChild(t);
-    var a=el('div','acts');p.liens.forEach(function(l){if(l.url)a.appendChild(lien(l.texte+' ↗',l.url,'lk'))});
-    if(a.children.length)c.appendChild(a);$('liste').appendChild(c);
-  });
-  ['Tous'].concat(cats).forEach(function(c,i){
-    var b=el('button','ch',c);b.type='button';b.setAttribute('aria-pressed',i===0?'true':'false');
-    b.addEventListener('click',function(){
-      $('filtres').querySelectorAll('.ch').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-      $('liste').querySelectorAll('.card').forEach(function(r){r.hidden=!(i===0||r.getAttribute('data-cat')===c)});
-    });$('filtres').appendChild(b);
-  });
-  $('pied').textContent=PROFIL.nom+" · Finance et Ingénierie décisionnelle · © "+new Date().getFullYear();
 
-  var items=[];
-  DOMAINES.forEach(function(d){items.push(d.code+' '+d.titre)});
-  PROJETS.forEach(function(p){items.push(p.code)});
-  DOMAINES.forEach(function(d){d.mots.forEach(function(m){if(items.indexOf(m)<0)items.push(m)})});
-  for(var r=0;r<2;r++)items.forEach(function(t){
-    var q=cotation(t),s=el('span','q');s.appendChild(el('b','',t));s.appendChild(el('i',q.up?'u':'d',(q.up?'▲ ':'▼ ')+q.txt));$('track').appendChild(s);
+  /* =========================================================
+     PROJETS ACADÉMIQUES
+     CORRECTION : UN PROJET PEUT NE PAS AVOIR DE LIENS
+     ========================================================= */
+
+  var categories = [];
+
+  PROJETS.forEach(function(projet) {
+    if (categories.indexOf(projet.categorie) === -1) {
+      categories.push(projet.categorie);
+    }
   });
 
-  var root=document.documentElement;
-  try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
-  $('tg').addEventListener('click',function(){
-    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);
-    try{localStorage.setItem('theme',n)}catch(e){}
+  PROJETS.forEach(function(projet) {
+
+    var carte = el("article", "card");
+
+    carte.setAttribute(
+      "data-cat",
+      projet.categorie
+    );
+
+    var meta = el("div", "cm");
+
+    meta.appendChild(
+      el("b", "", projet.code)
+    );
+
+    meta.appendChild(
+      el("span", "", projet.categorie)
+    );
+
+    carte.appendChild(meta);
+
+    carte.appendChild(
+      el("h3", "", projet.titre)
+    );
+
+    carte.appendChild(
+      el("p", "", projet.description)
+    );
+
+    var outils = el("ul", "tl");
+
+    (projet.outils || []).forEach(function(outil) {
+      outils.appendChild(
+        el("li", "", outil)
+      );
+    });
+
+    carte.appendChild(outils);
+
+    var actions = el("div", "acts");
+
+    /*
+      IMPORTANT :
+      (projet.liens || []) évite une erreur si
+      la propriété "liens" est absente.
+    */
+
+    (projet.liens || []).forEach(function(item) {
+
+      if (item.url) {
+        actions.appendChild(
+          lien(
+            item.texte + " ↗",
+            item.url,
+            "lk"
+          )
+        );
+      }
+
+    });
+
+    if (actions.children.length > 0) {
+      carte.appendChild(actions);
+    }
+
+    $("liste").appendChild(carte);
   });
+
+
+  /* =========================================================
+     FILTRES DES PROJETS
+     ========================================================= */
+
+  ["Tous"].concat(categories).forEach(function(categorie, index) {
+
+    var bouton = el("button", "ch", categorie);
+
+    bouton.type = "button";
+
+    bouton.setAttribute(
+      "aria-pressed",
+      index === 0 ? "true" : "false"
+    );
+
+    bouton.addEventListener("click", function() {
+
+      $("filtres")
+        .querySelectorAll(".ch")
+        .forEach(function(element) {
+
+          element.setAttribute(
+            "aria-pressed",
+            element === bouton ? "true" : "false"
+          );
+
+        });
+
+      $("liste")
+        .querySelectorAll(".card")
+        .forEach(function(carte) {
+
+          var correspond =
+            index === 0 ||
+            carte.getAttribute("data-cat") === categorie;
+
+          carte.hidden = !correspond;
+
+        });
+
+    });
+
+    $("filtres").appendChild(bouton);
+  });
+
+
+  /* =========================================================
+     PIED DE PAGE
+     ========================================================= */
+
+  $("pied").textContent =
+    PROFIL.nom +
+    " · Finance et Ingénierie décisionnelle · © " +
+    new Date().getFullYear();
+
+
+  /* =========================================================
+     BARRE DE COTATIONS DÉFILANTE
+     ========================================================= */
+
+  var items = [];
+
+  DOMAINES.forEach(function(domaine) {
+    items.push(
+      domaine.code + " " + domaine.titre
+    );
+  });
+
+  PROJETS.forEach(function(projet) {
+    items.push(projet.code);
+  });
+
+  DOMAINES.forEach(function(domaine) {
+
+    domaine.mots.forEach(function(mot) {
+
+      if (items.indexOf(mot) === -1) {
+        items.push(mot);
+      }
+
+    });
+
+  });
+
+  var track = $("track");
+
+  /*
+    On crée deux séries identiques pour permettre
+    à la seconde moitié de suivre la première.
+  */
+
+  for (var repetition = 0; repetition < 2; repetition++) {
+
+    items.forEach(function(texte) {
+
+      var variation = cotation(texte);
+      var element = el("span", "q");
+
+      element.appendChild(
+        el("b", "", texte)
+      );
+
+      element.appendChild(
+        el(
+          "i",
+          variation.up ? "u" : "d",
+          (variation.up ? "▲ " : "▼ ") + variation.txt
+        )
+      );
+
+      track.appendChild(element);
+
+    });
+
+  }
+
+
+  /* =========================================================
+     CHANGEMENT DE THÈME
+     ========================================================= */
+
+  var root = document.documentElement;
+
+  try {
+    var savedTheme = localStorage.getItem("theme");
+
+    if (
+      savedTheme === "dark" ||
+      savedTheme === "light"
+    ) {
+      root.setAttribute("data-theme", savedTheme);
+    }
+  } catch (error) {
+    /* Le stockage local peut être indisponible. */
+  }
+
+  $("tg").addEventListener("click", function() {
+
+    var nextTheme =
+      root.getAttribute("data-theme") === "dark"
+        ? "light"
+        : "dark";
+
+    root.setAttribute("data-theme", nextTheme);
+
+    try {
+      localStorage.setItem("theme", nextTheme);
+    } catch (error) {
+      /* Le thème fonctionne même sans stockage local. */
+    }
+
+  });
+
 })();
 
-/* Graphique en chandeliers animé */
-(function(){
-  var cv=document.getElementById('mc'),ctx=cv.getContext('2d'),N=36,W,H,c=[],last=1000;
-  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
-  function rn(){var u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(6.2832*v)}
-  function next(){var o=last,cl=o*Math.exp(0.001+0.014*rn());
-    var hi=Math.max(o,cl)*(1+Math.abs(rn())*0.004),lo=Math.min(o,cl)*(1-Math.abs(rn())*0.004);
-    last=cl;return {o:o,c:cl,h:hi,l:lo,v:0.25+Math.random()*0.75}}
-  function size(){var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0)}
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    var up=css('--up'),dn=css('--down'),ac=css('--acc'),ln=css('--line');
-    var ph=H*0.8,mn=Infinity,mx=-Infinity,i,k;
-    c.forEach(function(x){mn=Math.min(mn,x.l);mx=Math.max(mx,x.h)});
-    var pad=(mx-mn)*0.1||1;mn-=pad;mx+=pad;
-    var Y=function(v){return ph-(v-mn)/(mx-mn)*ph},st=W/N,bw=Math.max(3,st*0.6);
-    ctx.lineWidth=1;ctx.strokeStyle=ln;
-    for(i=1;i<5;i++){ctx.beginPath();ctx.moveTo(0,ph*i/5);ctx.lineTo(W,ph*i/5);ctx.stroke()}
-    c.forEach(function(x,j){
-      var cx=j*st+st/2,col=x.c>=x.o?up:dn;
-      ctx.globalAlpha=.28;ctx.fillStyle=col;ctx.fillRect(cx-bw/2,H-x.v*H*0.16,bw,x.v*H*0.16);
-      ctx.globalAlpha=1;ctx.strokeStyle=col;ctx.beginPath();ctx.moveTo(cx,Y(x.h));ctx.lineTo(cx,Y(x.l));ctx.stroke();
-      var y1=Y(Math.max(x.o,x.c)),y2=Y(Math.min(x.o,x.c));ctx.fillRect(cx-bw/2,y1,bw,Math.max(1.5,y2-y1));
-    });
-    ctx.strokeStyle=ac;ctx.lineWidth=1.6;ctx.beginPath();var s=false;
-    for(i=7;i<c.length;i++){var m=0;for(k=0;k<8;k++)m+=c[i-k].c;m/=8;var px=i*st+st/2;s?ctx.lineTo(px,Y(m)):ctx.moveTo(px,Y(m));s=true}
-    ctx.stroke();
-    var lc=c[c.length-1],pc=(lc.c/c[0].o-1)*100;
-    document.getElementById('px').textContent=lc.c.toFixed(2).replace('.',',');
-    var e=document.getElementById('chg');e.textContent=(pc>=0?'▲ +':'▼ −')+Math.abs(pc).toFixed(2).replace('.',',')+' %';e.className=pc>=0?'u':'d';
+
+/* =========================================================
+   GRAPHIQUE EN CHANDELIERS ANIMÉ
+   ========================================================= */
+
+(function() {
+
+  var canvas = document.getElementById("mc");
+  var ctx = canvas.getContext("2d");
+
+  var N = 36;
+  var W = 0;
+  var H = 0;
+  var bougies = [];
+  var dernierPrix = 1000;
+
+  var mouvementReduit =
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+
+  function css(variable) {
+    return getComputedStyle(
+      document.documentElement
+    ).getPropertyValue(variable).trim();
   }
-  function tick(){var d;if(c.length<N){c.push(next());d=60}else{c.shift();c.push(next());d=800}draw();setTimeout(tick,d)}
-  size();window.addEventListener('resize',function(){size();draw()});
-  if(still){for(var i=0;i<N;i++)c.push(next());draw()}else{tick()}
+
+
+  /* Génération de variations simulées */
+
+  function aleatoireNormal() {
+
+    var u = 0;
+    var v = 0;
+
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+
+    return Math.sqrt(-2 * Math.log(u)) *
+      Math.cos(2 * Math.PI * v);
+  }
+
+
+  function prochaineBougie() {
+
+    var ouverture = dernierPrix;
+
+    var cloture =
+      ouverture *
+      Math.exp(
+        0.001 + 0.014 * aleatoireNormal()
+      );
+
+    var haut =
+      Math.max(ouverture, cloture) *
+      (1 + Math.abs(aleatoireNormal()) * 0.004);
+
+    var bas =
+      Math.min(ouverture, cloture) *
+      (1 - Math.abs(aleatoireNormal()) * 0.004);
+
+    dernierPrix = cloture;
+
+    return {
+      o:ouverture,
+      c:cloture,
+      h:haut,
+      l:bas,
+      v:0.25 + Math.random() * 0.75
+    };
+  }
+
+
+  /* Adaptation à la taille de l'écran */
+
+  function redimensionner() {
+
+    var rect = canvas.getBoundingClientRect();
+
+    var ratio = window.devicePixelRatio || 1;
+
+    W = rect.width;
+    H = rect.height;
+
+    canvas.width = Math.round(W * ratio);
+    canvas.height = Math.round(H * ratio);
+
+    ctx.setTransform(
+      ratio, 0,
+      0, ratio,
+      0, 0
+    );
+
+    dessiner();
+  }
+
+
+  /* Dessin des chandeliers */
+
+  function dessiner() {
+
+    if (!W || !H || bougies.length === 0) {
+      return;
+    }
+
+    ctx.clearRect(0, 0, W, H);
+
+    var hausse = css("--up");
+    var baisse = css("--down");
+    var accent = css("--acc");
+    var ligne = css("--line");
+
+    var hauteurGraphique = H * 0.8;
+
+    var minimum = Infinity;
+    var maximum = -Infinity;
+
+    bougies.forEach(function(bougie) {
+      minimum = Math.min(minimum, bougie.l);
+      maximum = Math.max(maximum, bougie.h);
+    });
+
+    var marge = (maximum - minimum) * 0.1 || 1;
+
+    minimum -= marge;
+    maximum += marge;
+
+    function positionY(valeur) {
+      return hauteurGraphique -
+        ((valeur - minimum) / (maximum - minimum)) *
+        hauteurGraphique;
+    }
+
+    var largeurPas = W / N;
+    var largeurBougie = Math.max(3, largeurPas * 0.6);
+
+
+    /* Lignes horizontales */
+
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = ligne;
+
+    for (var i = 1; i < 5; i++) {
+
+      ctx.beginPath();
+
+      ctx.moveTo(0, hauteurGraphique * i / 5);
+      ctx.lineTo(W, hauteurGraphique * i / 5);
+
+      ctx.stroke();
+    }
+
+
+    /* Chandeliers et volumes */
+
+    bougies.forEach(function(bougie, index) {
+
+      var centreX =
+        index * largeurPas + largeurPas / 2;
+
+      var couleur =
+        bougie.c >= bougie.o ? hausse : baisse;
+
+      ctx.globalAlpha = 0.28;
+      ctx.fillStyle = couleur;
+
+      ctx.fillRect(
+        centreX - largeurBougie / 2,
+        H - bougie.v * H * 0.16,
+        largeurBougie,
+        bougie.v * H * 0.16
+      );
+
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = couleur;
+
+      ctx.beginPath();
+
+      ctx.moveTo(centreX, positionY(bougie.h));
+      ctx.lineTo(centreX, positionY(bougie.l));
+
+      ctx.stroke();
+
+      var hautCorps =
+        positionY(Math.max(bougie.o, bougie.c));
+
+      var basCorps =
+        positionY(Math.min(bougie.o, bougie.c));
+
+      ctx.fillStyle = couleur;
+
+      ctx.fillRect(
+        centreX - largeurBougie / 2,
+        hautCorps,
+        largeurBougie,
+        Math.max(1.5, basCorps - hautCorps)
+      );
+
+    });
+
+
+    /* Moyenne mobile */
+
+    ctx.strokeStyle = accent;
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+
+    var commence = false;
+
+    for (var j = 7; j < bougies.length; j++) {
+
+      var moyenne = 0;
+
+      for (var k = 0; k < 8; k++) {
+        moyenne += bougies[j - k].c;
+      }
+
+      moyenne /= 8;
+
+      var x = j * largeurPas + largeurPas / 2;
+      var y = positionY(moyenne);
+
+      if (commence) {
+        ctx.lineTo(x, y);
+      } else {
+        ctx.moveTo(x, y);
+        commence = true;
+      }
+
+    }
+
+    ctx.stroke();
+
+
+    /* Affichage du prix et de la variation */
+
+    var derniere = bougies[bougies.length - 1];
+
+    var variation =
+      (derniere.c / bougies[0].o - 1) * 100;
+
+    document.getElementById("px").textContent =
+      derniere.c.toFixed(2).replace(".", ",");
+
+    var changement = document.getElementById("chg");
+
+    changement.textContent =
+      (variation >= 0 ? "▲ +" : "▼ −") +
+      Math.abs(variation).toFixed(2).replace(".", ",") +
+      " %";
+
+    changement.className =
+      variation >= 0 ? "u" : "d";
+
+  }
+
+
+  /* Animation du graphique */
+
+  function tick() {
+
+    var delai;
+
+    if (bougies.length < N) {
+      bougies.push(prochaineBougie());
+      delai = 60;
+    } else {
+      bougies.shift();
+      bougies.push(prochaineBougie());
+      delai = 800;
+    }
+
+    dessiner();
+
+    if (!mouvementReduit) {
+      window.setTimeout(tick, delai);
+    }
+
+  }
+
+
+  /* Initialisation */
+
+  window.addEventListener("resize", redimensionner);
+
+  redimensionner();
+
+  if (mouvementReduit) {
+
+    for (var i = 0; i < N; i++) {
+      bougies.push(prochaineBougie());
+    }
+
+    dessiner();
+
+  } else {
+
+    tick();
+
+  }
+
 })();
 </script>
+
 </body>
 </html>
