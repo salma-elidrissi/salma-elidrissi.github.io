@@ -1,168 +1,242 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Salma El Idrissi · Portfolio</title>
+<title>Salma EL IDRISSI · Portfolio</title>
+<meta name="description" content="Portfolio de Salma EL IDRISSI, élève-ingénieure en finance et ingénierie décisionnelle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --page:#f3f1ec; --card:#fbfaf7; --ink:#25292d; --muted:#656b70; --line:#dcd8cf; --chip:#e8e5dd;
-  --accent:#4a6358; --accent-ink:#ffffff; --sand:#9a7b55;
-  --c1:#3f5f85; --c2:#2f7774; --c3:#94702f; --c4:#a2493f; --c5:#4a6358;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --bg:#f5f4ef;--panel:#ffffff;--ink:#14181c;--muted:#5b6670;--line:#d9d6cb;--soft:#ecebe4;
+  --acc:#a85f00;--acc-ink:#ffffff;--up:#0a8f5a;--down:#c62828;--blue:#1f62b5;
   --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--page:#1b1e20;--card:#232729;--ink:#ecebe6;--muted:#a3a8aa;--line:#363b3e;--chip:#2d3235;--accent:#8fb3a2;--accent-ink:#17201c;--sand:#c4a679;--c1:#8fb0d8;--c2:#7fc4bf;--c3:#d1ad6a;--c4:#e39a8f;--c5:#8fb3a2}
+  :root:not([data-theme="light"]){--bg:#07090b;--panel:#0e1216;--ink:#e6e9ec;--muted:#8b96a1;--line:#1d262e;--soft:#141a20;--acc:#ffb000;--acc-ink:#0a0c0e;--up:#19c37d;--down:#ff4d4f;--blue:#4da3ff}
 }
-:root[data-theme="dark"]{--page:#1b1e20;--card:#232729;--ink:#ecebe6;--muted:#a3a8aa;--line:#363b3e;--chip:#2d3235;--accent:#8fb3a2;--accent-ink:#17201c;--sand:#c4a679;--c1:#8fb0d8;--c2:#7fc4bf;--c3:#d1ad6a;--c4:#e39a8f;--c5:#8fb3a2}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root[data-theme="dark"]{--bg:#07090b;--panel:#0e1216;--ink:#e6e9ec;--muted:#8b96a1;--line:#1d262e;--soft:#141a20;--acc:#ffb000;--acc-ink:#0a0c0e;--up:#19c37d;--down:#ff4d4f;--blue:#4da3ff}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:72px;max-width:1100px;margin:0 auto;padding:72px 28px 56px}
-aside{position:sticky;top:56px;align-self:start}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);margin:0 0 18px}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,5vw,50px);line-height:1.05;letter-spacing:-.015em;margin:0 0 10px}
-.role{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);margin:0 0 20px}
-.intro{color:var(--muted);font-size:15px;margin:0 0 30px}
-.contact{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0 0 30px;padding:0}
-.contact a{display:inline-block;font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.contact a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-#mc{display:block;width:100%;height:170px}
-.cap{font-family:var(--mono);font-size:11px;color:var(--muted);margin:8px 0 0}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 
-.tabs{display:flex;flex-wrap:wrap;gap:6px 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
-.f{font-family:var(--sans);font-size:15px;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 0 12px;margin-bottom:-1px;cursor:pointer;transition:color .2s,border-color .2s}
-.f:hover{color:var(--ink)}
-.f[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--c,var(--accent));font-weight:600}
-.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:28px 30px;margin-bottom:20px;border-left:4px solid var(--c);transition:border-color .2s}
-.card:hover{border-color:var(--c)}
+/* Bandeau de cotations */
+.tape{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:1px solid var(--line);overflow:hidden;font-family:var(--mono);font-size:12px}
+.track{display:flex;width:max-content;animation:run 100s linear infinite}
+.tape:hover .track{animation-play-state:paused}
+.q{display:flex;gap:8px;padding:9px 20px;white-space:nowrap;border-right:1px solid var(--line)}
+.q b{color:var(--acc);font-weight:600;letter-spacing:.04em}
+.q i{font-style:normal}.q .u{color:var(--up)}.q .d{color:var(--down)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* En-tête */
+header.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 35px);z-index:19;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.logo{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.06em;text-decoration:none}
+.logo span{color:var(--acc)}
+nav{display:flex;align-items:center;gap:6px}
+nav a,.tg{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:4px;border:1px solid transparent;background:none;cursor:pointer;transition:color .2s,border-color .2s}
+nav a:hover,.tg:hover{color:var(--acc);border-color:var(--line)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding:64px 0 40px}
+.tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:5px 14px;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--up);animation:bl 1.6s ease-in-out infinite}
+@keyframes bl{50%{opacity:.2}}
+h1{font-weight:800;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.03em;margin:0 0 14px}
+.role{font-family:var(--mono);font-size:15px;color:var(--acc);margin:0 0 18px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 14px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.b1,.b2{display:inline-block;font-family:var(--mono);font-size:13px;font-weight:600;text-decoration:none;padding:11px 20px;border-radius:4px;transition:transform .2s,color .2s,border-color .2s}
+.b1{background:var(--acc);color:var(--acc-ink);border:1px solid var(--acc)}
+.b2{border:1px solid var(--line);color:var(--ink)}
+.b1:hover,.b2:hover{transform:translateY(-2px)}
+.b2:hover{border-color:var(--acc);color:var(--acc)}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--soft)}
+.bar b{color:var(--acc);font-weight:600}
+#mc{display:block;width:100%;height:260px}
+.foot{display:flex;justify-content:space-between;padding:9px 14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.foot .u{color:var(--up)}.foot .d{color:var(--down)}
+
+/* Séparation */
+.hero{margin-bottom:32px}
+
+/* Sections */
+section{margin-bottom:80px}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sh em{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--acc)}
+h2{font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin:0}
+
+/* Watchlist */
+.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;transition:border-color .2s,transform .2s}
+.row:hover{border-color:var(--acc);transform:translateY(-2px)}
+.sym{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--acc-ink);background:var(--acc);border-radius:4px;height:fit-content;text-align:center;padding:6px 0}
+.row h3{margin:0 0 4px;font-size:17px;display:flex;justify-content:space-between;gap:10px}
+.row h3 i{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--up)}
+.row p{margin:0 0 10px;color:var(--muted);font-size:14.5px;line-height:1.5}
+.kw{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.kw li{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 8px}
+
+/* Projets */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.ch{font-family:var(--mono);font-size:12.5px;background:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer;transition:color .2s,border-color .2s}
+.ch:hover{color:var(--ink);border-color:var(--muted)}
+.ch[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-3px)}
 .card[hidden]{display:none}
-.meta{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--c);margin:0 0 12px;display:flex;gap:10px;flex-wrap:wrap}
-.meta span+span::before{content:"·";margin-right:10px;color:var(--muted)}
-h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3vw,27px);line-height:1.22;margin:0 0 10px}
-.card p{margin:0 0 16px;color:var(--muted);font-size:15.5px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 20px}
-.tags li{font-family:var(--mono);font-size:12px;background:var(--chip);background:color-mix(in srgb,var(--c) 13%,var(--card));color:var(--ink);padding:3px 10px;border-radius:3px}
-.acts{display:flex;flex-wrap:wrap;gap:10px}
-.btn{font-size:14px;font-weight:600;text-decoration:none;padding:8px 16px;border-radius:4px;border:1px solid var(--c);color:var(--c);transition:background .2s,color .2s}
-.btn:first-child{background:var(--c);color:var(--accent-ink)}
-.btn:hover{background:var(--c);color:var(--accent-ink)}
-footer{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;color:var(--muted);font-size:14px}
-.ticker{border-bottom:1px solid var(--line);background:var(--card);overflow:hidden;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--muted)}
-.track{display:flex;width:max-content;animation:defile 70s linear infinite}
-.ticker:hover .track{animation-play-state:paused}
-.track span{padding:10px 22px;white-space:nowrap}
-.track b{color:var(--ink);font-weight:500;margin-right:6px}
-.track .u{color:var(--c5)}
-.track .d{color:var(--c4)}
-@keyframes defile{to{transform:translateX(-50%)}}
-.sec{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
-.doms{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:44px}
-.dom{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:6px;padding:18px 18px 16px}
-.dom h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.2;margin:0 0 6px}
-.dom p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.5}
-.dom ul{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
-.dom li{font-family:var(--mono);font-size:11.5px;color:var(--c);border:1px solid var(--c);border-radius:3px;padding:1px 7px}
-@media (max-width:860px){.layout{grid-template-columns:1fr;gap:40px;padding-top:48px}aside{position:static}}
-@media (prefers-reduced-motion: reduce){.track{animation:none}.card,.btn,.f,.contact a{transition:none}}
+.cm{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;margin-bottom:12px}
+.cm b{color:var(--acc)}.cm span{color:var(--muted)}
+.card h3{margin:0 0 10px;font-size:20px;line-height:1.25;letter-spacing:-.01em}
+.card p{margin:0 0 16px;color:var(--muted);font-size:14.5px;line-height:1.6;flex:1}
+.tl{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 18px;padding:0}
+.tl li{font-family:var(--mono);font-size:11.5px;color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,transparent);border-radius:3px;padding:2px 9px}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+.lk{font-family:var(--mono);font-size:12.5px;font-weight:600;text-decoration:none;padding:7px 14px;border-radius:4px;border:1px solid var(--line);transition:background .2s,color .2s,border-color .2s}
+.lk:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+/* Contact */
+.ct{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:34px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
+.ct h3{margin:0 0 6px;font-size:24px}.ct p{margin:0;color:var(--muted)}
+.ct ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:32px;padding-top:40px}.wl,.grid{grid-template-columns:1fr}nav a:not(.keep){display:none}}
+@media (prefers-reduced-motion: reduce){.track,.dot{animation:none}.row,.card,.b1,.b2,.ch,.lk{transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
-<div class="layout">
-  <aside>
-    <p class="label">Portfolio · Projets académiques</p>
-    <h1 id="nom"></h1>
-    <p class="role" id="titre"></p>
-    <p class="intro" id="intro"></p>
-    <ul class="contact" id="contact"></ul>
-    <canvas id="mc" aria-hidden="true"></canvas>
-    <p class="cap">Marché boursier simulé</p>
-  </aside>
-  <main>
-    <p class="sec">Domaines d’expertise</p>
-    <div class="doms" id="doms"></div>
-    <p class="sec">Projets académiques</p>
-    <div class="tabs" id="filtres" role="group" aria-label="Filtrer les projets"></div>
-    <div id="liste"></div>
-  </main>
-  <footer id="pied"></footer>
-</div>
+<div class="tape" aria-hidden="true"><div class="track" id="track"></div></div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#haut" id="logo"></a>
+  <nav aria-label="Navigation">
+    <a href="#expertise">Expertise</a><a href="#projets">Projets</a><a href="#contact" class="keep">Contact</a>
+    <button class="tg" id="tg" type="button" aria-label="Changer de thème">◐ Thème</button>
+  </nav>
+</div></header>
+
+<main class="wrap" id="haut">
+  <div class="hero">
+    <div>
+      <span class="tag"><span class="dot"></span>Ouverte à un PFE</span>
+      <h1 id="nom"></h1>
+      <p class="role" id="titre"></p>
+      <p class="lead" id="pfe"></p>
+      <p class="lead" id="intro"></p>
+      <div class="cta" id="cta"></div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="bar"><b>S.ELIDRISSI &lt;GO&gt;</b><span>Marché simulé · temps réel</span></div>
+      <canvas id="mc"></canvas>
+      <div class="foot"><span id="px">—</span><span id="chg">—</span></div>
+    </div>
+  </div>
+
+  <section id="expertise">
+    <div class="sh"><em>01</em><h2>Domaines d’expertise</h2></div>
+    <div class="wl" id="doms"></div>
+  </section>
+
+  <section id="projets">
+    <div class="sh"><em>02</em><h2>Projets académiques</h2></div>
+    <div class="chips" id="filtres" role="group" aria-label="Filtrer les projets"></div>
+    <div class="grid" id="liste"></div>
+  </section>
+
+  <section id="contact">
+    <div class="ct">
+      <div><h3>Discutons de votre projet</h3><p>Disponible pour un Projet de Fin d’Études en finance, risques et data.</p></div>
+      <ul id="coord"></ul>
+    </div>
+  </section>
+</main>
+<div class="wrap"><footer id="pied"></footer></div>
 
 <script>
-
 var PROFIL = {
   nom: "Salma El Idrissi",
-  titre: "Élève-ingénieur en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je suis actuellement à la recherche d’un Projet de Fin d’Études (PFE) me permettant de mettre en pratique mes compétences techniques, de contribuer à des projets à forte valeur ajoutée et d’approfondir mon expertise dans un environnement professionnel stimulant.",
-  intro: "À travers ce portfolio, je vous invite à découvrir les projets que j’ai menés au cours de mon parcours d’ingénieur, témoignant de mes compétences techniques, de ma capacité à concevoir des solutions concrètes et de mon engagement dans la réalisation de projets innovants. Vous y trouverez également les codes sources, les documentations techniques ainsi que les applications déployées en ligne, lorsqu’elles sont disponibles.",
+  titre: "Élève-ingénieure · Finance & Ingénierie décisionnelle",
+  pfe: "Élève-ingénieure en dernière année du cycle ingénieur à l’École Nationale des Sciences Appliquées (ENSA), je recherche un Projet de Fin d’Études (PFE) pour mettre en pratique mes compétences techniques, contribuer à des projets à forte valeur ajoutée et approfondir mon expertise dans un environnement professionnel stimulant.",
+  intro: "Ce portfolio rassemble les projets menés au cours de mon parcours d’ingénieur, avec les codes sources, les documentations techniques et les applications déployées en ligne lorsqu’elles sont disponibles.",
   github: "https://github.com/salma-elidrissi",
   email: "salma.elidrissi@edu.uiz.ac.ma",
   linkedin: "https://www.linkedin.com/in/salma-el-idrissi-171911224/",
   cv: "cv-salma-ELIDRISSI.pdf"
 };
+
 var DOMAINES = [
-  { titre: "Gestion des risques", couleur: "c4",
-    texte: "Mesure et maîtrise des risques de marché, de crédit et de liquidité.",
-    mots: ["VaR", "Volatilité", "Stress tests"] },
-  { titre: "Gestion de portefeuille", couleur: "c3",
-    texte: "Construction et suivi de portefeuilles : allocation d’actifs, diversification, arbitrage rendement-risque.",
-    mots: ["Markowitz", "Ratio de Sharpe", "Allocation"] },
-  { titre: "Marchés boursiers", couleur: "c5",
-    texte: "Suivi des marchés actions et des indices, analyse technique et fondamentale.",
-    mots: ["Actions", "Indices", "Analyse technique"] }
+  { code: "PTF", titre: "Gestion de portefeuille", texte: "Allocation d’actifs, diversification et arbitrage rendement-risque.", mots: ["Markowitz", "Sharpe", "Allocation"] },
+  { code: "RSK", titre: "Gestion des risques", texte: "Mesure et maîtrise des risques de marché, de crédit et de liquidité.", mots: ["VaR", "Volatilité", "Stress tests"] },
+  { code: "ASS", titre: "Assurance", texte: "Modélisation actuarielle, tarification et provisionnement des risques.", mots: ["Actuariat", "Tarification", "Provisionnement"] },
+  { code: "YLD", titre: "Courbe des taux", texte: "Structure par terme, construction de courbes et sensibilité des produits de taux.", mots: ["Zéro-coupon", "Duration", "Structure par terme"] },
+  { code: "VAL", titre: "Valorisation", texte: "Évaluation d’options, de produits dérivés et d’actifs sous incertitude.", mots: ["Black-Scholes", "Monte Carlo", "Arbres"] },
+  { code: "ECO", titre: "Économétrie", texte: "Séries temporelles et relations de long terme entre variables économiques.", mots: ["modélisation", "Series temporelles", "Eviews"] },
+  { code: "MOD", titre: "Modélisation", texte: "Modèles stochastiques et numériques pour représenter l’incertitude des marchés.", mots: ["Heston", "Merton", "Euler-Maruyama"] },
+  { code: "DS", titre: "Data science", texte: "Apprentissage automatique, classification et segmentation de données.", mots: ["Machine Learning", "CAH", "K-means"] }
 ];
 
 var PROJETS = [
   {
     code: "OPTIONLAB",
     categorie: "Finance quantitative",
-    titre: "Pricing d’options V3: rapport, interface et code",
+    titre: "Pricing d’options V3 : rapport, interface et code",
     description: "Développement d’une application interactive sous Streamlit pour le pricing d’options européennes et américaines via les arbres binomiaux et trinomiaux, intégrant des données de marché en temps réel, avec analyse de la convergence numérique des prix et benchmark par rapport aux valeurs théoriques du modèle de Black-Scholes.",
     outils: ["Python", "CRR et trinomial", "Black-Scholes"],
     liens: [
       { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf" },
       { texte: "Code", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py" },
-      { texte: "Interface", url: "https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app" },
+      { texte: "Interface", url: "https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app" }
     ]
   },
   {
     code: "QUANTLAB",
     categorie: "Finance quantitative",
-    titre: "Pricing d’options V2: rapport, interface et code",
-    description: "Conception d'une application interactive sous Streamlit évaluant le juste prix des options financières à travers une approche comparative complète. Ce projet met en valeur l'utilité conjointe de la formule analytique de Black-Scholes, des méthodes stochastiques de simulation (Monte Carlo, Euler-Maruyama) et de modèles de Machine Learning (Gradient Boosting), offrant ainsi un outil d'aide à la décision ultra-rapide et performant pour le trading et la gestion des risques.",
-    outils: ["Python", "Euler Maruyama", "ML"],
+    titre: "Pricing d’options V2 : rapport, interface et code",
+    description: "Conception d’une application interactive sous Streamlit évaluant le juste prix des options financières par une approche comparative : formule analytique de Black-Scholes, méthodes stochastiques de simulation (Monte Carlo, Euler-Maruyama) et modèles de Machine Learning (Gradient Boosting), pour un outil d’aide à la décision rapide et performant en trading et gestion des risques.",
+    outils: ["Python", "Euler-Maruyama", "ML"],
     liens: [
       { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf" },
       { texte: "Code", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Quant_Pricing/Rapport.pdf" },
       { texte: "Interface", url: "https://salma-elidrissiappio-hrwwgxy57jjgdpxxje2k3c.streamlit.app/" }
     ]
   },
-    {
-    code: "OptiPricer",
+  {
+    code: "OPTIPRICER",
     categorie: "Finance quantitative",
-    titre: "Pricing d’options V1: rapport, interface et code",
-    description: "Développement d’une plateforme interactive sous Streamlit dédiée à l'évaluation des options européennes et américaines. Ce projet implémente des modèles stochastiques sophistiqués (Mouvement Brownien Géométrique, Heston, Merton) ainsi que des méthodes numériques robustes (Monte Carlo avec réduction de variance et algorithme de Longstaff-Schwartz), offrant ainsi un outil d'aide à la décision performant et pédagogique pour la gestion des risques et la finance quantitative.",    outils: ["Python", "Monte Carlo", "Longstaff-Schwartz"],
+    titre: "Pricing d’options V1 : rapport, interface et code",
+    description: "Développement d’une plateforme interactive sous Streamlit dédiée à l’évaluation des options européennes et américaines. Le projet implémente des modèles stochastiques (mouvement brownien géométrique, Heston, Merton) et des méthodes numériques robustes (Monte Carlo avec réduction de variance, algorithme de Longstaff-Schwartz), pour un outil à la fois performant et pédagogique.",
+    outils: ["Python", "Monte Carlo", "Longstaff-Schwartz"],
     liens: [
-      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/OptiPricer/rapport.pdf" },
+      { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/OptiPricer/rapport.pdf" }
     ]
   },
   {
-    code: "Taux",
-    categorie: "Étude Économétrique--Machine Learning",
-    titre: "Modélisation de l’impact des taux d’intérêt sur les décisions d’investissement au Maroc",
+    code: "TAUX",
+    categorie: "Économétrie & ML",
+    titre: "Impact des taux d’intérêt sur les décisions d’investissement au Maroc",
     description: "Analyse et prévision de la Formation Brute de Capital (FBC) au Maroc à travers l’étude des relations de long terme entre les taux d’intérêt et les principaux agrégats macroéconomiques, à l’aide d’un modèle économétrique VECM et d’algorithmes de Machine Learning.",
-    outils: ["Eviews", "VECM", "XGBOOST"],
+    outils: ["Eviews", "VECM", "XGBoost"],
     liens: [
       { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf" },
-      { texte: "Code", url: "https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/" }
+      { texte: "Interface", url: "https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/" }
+    ]
+  },
+  {
+    code: "SEG",
+    categorie: "Data science",
+    titre: "Classification et segmentation de données par CAH et K-means",
+    description: "Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.",
+    outils: ["Python", "CAH", "K-means"],
     ]
   },
   {
@@ -174,137 +248,103 @@ var PROJETS = [
     liens: [
       { texte: "Rapport", url: "https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf" }
     ]
-  },
-  {
-    code: "SEG",
-    categorie: "Data science",
-    titre: "Classification et segmentation de données par CAH et K-means",
-    description: "Regroupement de données en classes homogènes avec deux méthodes complémentaires, puis comparaison et interprétation des segments obtenus.",
-    outils: ["Python", "CAH", "K-means"],
-    liens: [
-      { texte: "Rapport", url: "" },
-      { texte: "Code", url: "" }
-    ]
   }
 ];
-/* ===================== FIN DE LA ZONE À MODIFIER ===================== */
 
 (function(){
-  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
-  function lien(txt,url,cls){var a=el('a',cls,txt);a.href=url;if(/^https?:/.test(url)){a.target='_blank';a.rel='noopener'}return a}
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+  function lien(x,u,c){var a=el('a',c,x);a.href=u;if(/^https?:/.test(u)){a.target='_blank';a.rel='noopener'}return a}
+  function $(i){return document.getElementById(i)}
+  function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%9973;return h}
+  function cotation(s){var h=hash(s),v=((h%380)+8)/100,up=h%3!==1;return {up:up,txt:(up?'+':'−')+v.toFixed(2).replace('.',',')+' %'}}
 
   document.title=PROFIL.nom+" · Portfolio";
-  document.getElementById('nom').textContent=PROFIL.nom;
-  document.getElementById('titre').textContent=PROFIL.titre;
-  document.getElementById('intro').textContent=PROFIL.intro;
+  $('nom').textContent=PROFIL.nom;$('titre').textContent=PROFIL.titre;$('pfe').textContent=PROFIL.pfe;$('intro').textContent=PROFIL.intro;
+  var lg=$('logo');lg.appendChild(document.createTextNode(PROFIL.nom.split(' ')[0].toUpperCase()+'.'));lg.appendChild(el('span','','EI'));
 
-  var contact=document.getElementById('contact');
-  [["GitHub",PROFIL.github],
-   ["Email",PROFIL.email?"mailto:"+PROFIL.email:""],
-   ["LinkedIn",PROFIL.linkedin],
-   ["CV",PROFIL.cv]].forEach(function(c){
-    if(!c[1])return;
-    var li=el('li');li.appendChild(lien(c[0],c[1]));contact.appendChild(li);
+  var cta=$('cta');
+  cta.appendChild(lien('Voir les projets','#projets','b1'));
+  if(PROFIL.cv)cta.appendChild(lien('Télécharger le CV',PROFIL.cv,'b2'));
+  [["LinkedIn",PROFIL.linkedin],["GitHub",PROFIL.github],["Email",PROFIL.email?"mailto:"+PROFIL.email:""]].forEach(function(c,i){
+    if(!c[1])return;var li=el('li');li.appendChild(lien(c[0],c[1],i===0?'b1':'b2'));$('coord').appendChild(li);
   });
 
-  var cats=[];
-  PROJETS.forEach(function(p){if(cats.indexOf(p.categorie)<0)cats.push(p.categorie)});
-  function cc(i){return 'var(--c'+((i%5)+1)+')'}
-
-  var doms=document.getElementById('doms');
   DOMAINES.forEach(function(d){
-    var x=el('article','dom');x.style.setProperty('--c','var(--'+d.couleur+')');
-    x.appendChild(el('h3','',d.titre));x.appendChild(el('p','',d.texte));
-    var u=el('ul');(d.mots||[]).forEach(function(m){u.appendChild(el('li','',m))});
-    x.appendChild(u);doms.appendChild(x);
+    var r=el('article','row');r.appendChild(el('div','sym',d.code));
+    var b=el('div'),h=el('h3','',d.titre);h.appendChild(el('i','','▲'));
+    b.appendChild(h);b.appendChild(el('p','',d.texte));
+    var u=el('ul','kw');d.mots.forEach(function(m){u.appendChild(el('li','',m))});b.appendChild(u);
+    r.appendChild(b);$('doms').appendChild(r);
   });
 
-  var liste=document.getElementById('liste');
+  var cats=[];PROJETS.forEach(function(p){if(cats.indexOf(p.categorie)<0)cats.push(p.categorie)});
   PROJETS.forEach(function(p){
-    var card=el('article','card');card.setAttribute('data-cat',p.categorie);card.style.setProperty('--c',cc(cats.indexOf(p.categorie)));
-    var meta=el('p','meta');meta.appendChild(el('span','',p.code));meta.appendChild(el('span','',p.categorie));
-    card.appendChild(meta);
-    card.appendChild(el('h2','',p.titre));
-    card.appendChild(el('p','',p.description));
-    var ul=el('ul','tags');(p.outils||[]).forEach(function(o){ul.appendChild(el('li','',o))});card.appendChild(ul);
-    var acts=el('div','acts');(p.liens||[]).forEach(function(l){if(l.url)acts.appendChild(lien(l.texte,l.url,'btn'))});
-    if(acts.children.length)card.appendChild(acts);
-    liste.appendChild(card);
+    var c=el('article','card');c.setAttribute('data-cat',p.categorie);
+    var m=el('div','cm');m.appendChild(el('b','',p.code));m.appendChild(el('span','',p.categorie));c.appendChild(m);
+    c.appendChild(el('h3','',p.titre));c.appendChild(el('p','',p.description));
+    var t=el('ul','tl');p.outils.forEach(function(o){t.appendChild(el('li','',o))});c.appendChild(t);
+    var a=el('div','acts');p.liens.forEach(function(l){if(l.url)a.appendChild(lien(l.texte+' ↗',l.url,'lk'))});
+    if(a.children.length)c.appendChild(a);$('liste').appendChild(c);
   });
-
-  var filtres=document.getElementById('filtres');
   ['Tous'].concat(cats).forEach(function(c,i){
-    var b=el('button','f',c);b.setAttribute('aria-pressed',i===0?'true':'false');if(i>0)b.style.setProperty('--c',cc(i-1));
+    var b=el('button','ch',c);b.type='button';b.setAttribute('aria-pressed',i===0?'true':'false');
     b.addEventListener('click',function(){
-      filtres.querySelectorAll('.f').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-      liste.querySelectorAll('.card').forEach(function(r){r.hidden=!(i===0||r.getAttribute('data-cat')===c)});
-    });
-    filtres.appendChild(b);
+      $('filtres').querySelectorAll('.ch').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      $('liste').querySelectorAll('.card').forEach(function(r){r.hidden=!(i===0||r.getAttribute('data-cat')===c)});
+    });$('filtres').appendChild(b);
+  });
+  $('pied').textContent=PROFIL.nom+" · Finance et Ingénierie décisionnelle · © "+new Date().getFullYear();
+
+  var items=[];
+  DOMAINES.forEach(function(d){items.push(d.code+' '+d.titre)});
+  PROJETS.forEach(function(p){items.push(p.code)});
+  DOMAINES.forEach(function(d){d.mots.forEach(function(m){if(items.indexOf(m)<0)items.push(m)})});
+  for(var r=0;r<2;r++)items.forEach(function(t){
+    var q=cotation(t),s=el('span','q');s.appendChild(el('b','',t));s.appendChild(el('i',q.up?'u':'d',(q.up?'▲ ':'▼ ')+q.txt));$('track').appendChild(s);
   });
 
-  document.getElementById('pied').textContent=PROFIL.nom+" · Finance et Ingénierie Décisionnelle";
+  var root=document.documentElement;
+  try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+  $('tg').addEventListener('click',function(){
+    var n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n)}catch(e){}
+  });
 })();
 
-/* Bandeau de cotations (généré à partir de vos projets) */
+/* Graphique en chandeliers animé */
 (function(){
-  var items=[];
-  PROJETS.forEach(function(p){items.push(p.code)});
-  PROJETS.forEach(function(p){(p.outils||[]).forEach(function(o){if(items.indexOf(o)<0)items.push(o)})});
-  DOMAINES.forEach(function(d){[d.titre].concat(d.mots||[]).forEach(function(m){if(items.indexOf(m)<0)items.push(m)})});
-  var track=document.getElementById('track');
-  for(var r=0;r<2;r++){
-    items.forEach(function(t,i){
-      var up=(i%3!==1),s=document.createElement('span'),b=document.createElement('b'),m=document.createElement('i');
-      b.textContent=t;m.textContent=up?'▲':'▼';m.className=up?'u':'d';m.style.fontStyle='normal';
-      s.appendChild(b);s.appendChild(m);track.appendChild(s);
-    });
-  }
-})();
-
-/* Chandeliers japonais animés */
-(function(){
-  var cv=document.getElementById('mc'),ctx=cv.getContext('2d');
-  var N=30,W,H,c=[],last=100;
+  var cv=document.getElementById('mc'),ctx=cv.getContext('2d'),N=36,W,H,c=[],last=1000;
   var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
   function rn(){var u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(6.2832*v)}
-  function next(){
-    var o=last,cl=o*Math.exp(0.001+0.016*rn());
-    var hi=Math.max(o,cl)*(1+Math.abs(rn())*0.005),lo=Math.min(o,cl)*(1-Math.abs(rn())*0.005);
-    last=cl;return {o:o,c:cl,h:hi,l:lo,v:0.25+Math.random()*0.75};
-  }
+  function next(){var o=last,cl=o*Math.exp(0.001+0.014*rn());
+    var hi=Math.max(o,cl)*(1+Math.abs(rn())*0.004),lo=Math.min(o,cl)*(1-Math.abs(rn())*0.004);
+    last=cl;return {o:o,c:cl,h:hi,l:lo,v:0.25+Math.random()*0.75}}
   function size(){var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0)}
   function draw(){
     ctx.clearRect(0,0,W,H);
-    var up=css('--c5'),dn=css('--c4'),mut=css('--muted'),line=css('--line');
-    var ph=H*0.78,mn=Infinity,mx=-Infinity,i,k;
+    var up=css('--up'),dn=css('--down'),ac=css('--acc'),ln=css('--line');
+    var ph=H*0.8,mn=Infinity,mx=-Infinity,i,k;
     c.forEach(function(x){mn=Math.min(mn,x.l);mx=Math.max(mx,x.h)});
     var pad=(mx-mn)*0.1||1;mn-=pad;mx+=pad;
-    var Y=function(v){return ph-(v-mn)/(mx-mn)*ph},step=W/N,bw=Math.max(3,step*0.58);
-    ctx.lineWidth=1;ctx.strokeStyle=line;
-    for(i=1;i<4;i++){ctx.beginPath();ctx.moveTo(0,ph*i/4);ctx.lineTo(W,ph*i/4);ctx.stroke()}
+    var Y=function(v){return ph-(v-mn)/(mx-mn)*ph},st=W/N,bw=Math.max(3,st*0.6);
+    ctx.lineWidth=1;ctx.strokeStyle=ln;
+    for(i=1;i<5;i++){ctx.beginPath();ctx.moveTo(0,ph*i/5);ctx.lineTo(W,ph*i/5);ctx.stroke()}
     c.forEach(function(x,j){
-      var cx=j*step+step/2,col=x.c>=x.o?up:dn;
-      ctx.globalAlpha=.3;ctx.fillStyle=col;ctx.fillRect(cx-bw/2,H-x.v*H*0.17,bw,x.v*H*0.17);
+      var cx=j*st+st/2,col=x.c>=x.o?up:dn;
+      ctx.globalAlpha=.28;ctx.fillStyle=col;ctx.fillRect(cx-bw/2,H-x.v*H*0.16,bw,x.v*H*0.16);
       ctx.globalAlpha=1;ctx.strokeStyle=col;ctx.beginPath();ctx.moveTo(cx,Y(x.h));ctx.lineTo(cx,Y(x.l));ctx.stroke();
-      var y1=Y(Math.max(x.o,x.c)),y2=Y(Math.min(x.o,x.c));
-      ctx.fillRect(cx-bw/2,y1,bw,Math.max(1.5,y2-y1));
+      var y1=Y(Math.max(x.o,x.c)),y2=Y(Math.min(x.o,x.c));ctx.fillRect(cx-bw/2,y1,bw,Math.max(1.5,y2-y1));
     });
-    ctx.strokeStyle=mut;ctx.lineWidth=1.4;ctx.globalAlpha=.8;ctx.beginPath();
-    var started=false;
-    for(i=4;i<c.length;i++){
-      var m=0;for(k=0;k<5;k++)m+=c[i-k].c;m/=5;
-      var px=i*step+step/2;started?ctx.lineTo(px,Y(m)):ctx.moveTo(px,Y(m));started=true;
-    }
-    ctx.stroke();ctx.globalAlpha=1;
+    ctx.strokeStyle=ac;ctx.lineWidth=1.6;ctx.beginPath();var s=false;
+    for(i=7;i<c.length;i++){var m=0;for(k=0;k<8;k++)m+=c[i-k].c;m/=8;var px=i*st+st/2;s?ctx.lineTo(px,Y(m)):ctx.moveTo(px,Y(m));s=true}
+    ctx.stroke();
+    var lc=c[c.length-1],pc=(lc.c/c[0].o-1)*100;
+    document.getElementById('px').textContent=lc.c.toFixed(2).replace('.',',');
+    var e=document.getElementById('chg');e.textContent=(pc>=0?'▲ +':'▼ −')+Math.abs(pc).toFixed(2).replace('.',',')+' %';e.className=pc>=0?'u':'d';
   }
-  function tick(){
-    var delay;
-    if(c.length<N){c.push(next());delay=70}else{c.shift();c.push(next());delay=750}
-    draw();setTimeout(tick,delay);
-  }
-  size();
-  window.addEventListener('resize',function(){size();draw()});
+  function tick(){var d;if(c.length<N){c.push(next());d=60}else{c.shift();c.push(next());d=800}draw();setTimeout(tick,d)}
+  size();window.addEventListener('resize',function(){size();draw()});
   if(still){for(var i=0;i<N;i++)c.push(next());draw()}else{tick()}
 })();
 </script>
