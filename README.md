@@ -16,7 +16,7 @@
 
 </div>
 
-## 👤 À propos de moi
+##  À propos de moi
 
 Bienvenue sur mon portfolio GitHub ! 
 
@@ -28,7 +28,7 @@ Bienvenue sur mon portfolio GitHub !
 
 ---
 
-## 🎯 Domaines d'Expertise
+##  Domaines d'Expertise
 
 | Domaine | Thématiques & Compétences Clés |
 | :--- | :--- |
@@ -47,9 +47,9 @@ Bienvenue sur mon portfolio GitHub !
 
 ---
 
-## 🚀 Projets Académiques
+##  Projets Académiques
 
-### 📈 OPT — Pricing d'Options & Analyse des Sensibilités
+### OPT — Pricing d'Options & Analyse des Sensibilités
 * **Domaine :** Finance quantitative
 * **Objectif :** Valoriser les options financières et calculer leurs sensibilités (Greeks) via une application web interactive.
 * **Méthodologies :**
@@ -59,10 +59,10 @@ Bienvenue sur mon portfolio GitHub !
     $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
   * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
 * **Stack :** Python, NumPy, Pandas, Streamlit.
-* **Livrables **: [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · [🖥️ Application interactive](https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app/) · [💻 Code source Python](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py)
+* **Livrables **: [ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · [ Application interactive](https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app/) · [ Code source Python](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py)
 ---
 
-### 📉 TAUX — Impact des Taux d'Intérêt sur l'Investissement au Maroc
+### TAUX — Impact des Taux d'Intérêt sur l'Investissement au Maroc
 * **Domaine :** Économétrie financière
 * **Objectif :** Étudier l'impact des variations de taux d'intérêt sur la dynamique d'investissement national, en vérifiant la relation théorique :
   $$\frac{\partial I}{\partial r} < 0$$
@@ -70,20 +70,20 @@ Bienvenue sur mon portfolio GitHub !
   * Analyse de stationnarité (tests ADF/PP) et de cointégration (Johansen).
   * Modélisation par Modèle Vectoriel à Correction d'Erreur (VECM) pour capturer les dynamiques de court et long terme.
 * **Stack :** Python, EViews.
-* **Livrables : [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf) · [🖥️ Application interactive](https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/) · 
+* **Livrables : [ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf) · [ Application interactive](https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/) · 
 
 ---
 
-### ✈️ VOL — Prédiction des Prix des Billets d'Avion
+### VOL — Prédiction des Prix des Billets d'Avion
 * **Domaine :** Data Science & Machine Learning
 * **Objectif :** Estimer le prix des billets à partir des caractéristiques de vol via des algorithmes de régression.
 * **Méthodologies :** Nettoyage des données, Feature Engineering, comparaison des modèles (Régression Linéaire, Random Forest, XGBoost) et évaluation sur jeux de test.
 * **Stack :** Python, Pandas, Scikit-learn, XGBoost.
-* **Livrable :[📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf)
+* **Livrable :[ Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf)
 
 ---
 
-### 🧩 SEG — Segmentation Client par Apprentissage Non Supervisé
+### SEG — Segmentation Client par Apprentissage Non Supervisé
 * **Domaine :** Machine Learning
 * **Objectif :** Identifier des profils homogènes au sein d'un jeu de données complexe.
 * **Méthodologies :**
@@ -95,7 +95,7 @@ Bienvenue sur mon portfolio GitHub !
 
 ---
 
-## 📬 Contact & Réseaux
+##  Contact & Réseaux
 
 Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de collaborations sur des projets quantitatifs, financiers et data.
 
