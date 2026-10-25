@@ -4,7 +4,7 @@
 
 **Élève Ingénieure en Finance & Ingénierie Décisionnelle (ENSA Agadir)**
 
-Finance Quantitative · Économétrie · Data Science · Aide à la Décision
+Finance Quantitative  · Actuariat · Risk Management · Data Science
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salma-el-idrissi-171911224/)
 [![Email](https://img.shields.io/badge/Email-Me_contacter-64748B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:salma.elidrissi@edu.uiz.ac.ma)
@@ -19,23 +19,28 @@ Finance Quantitative · Économétrie · Data Science · Aide à la Décision
 
 Bienvenue sur mon portfolio GitHub ! 
 
-Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me passionne pour la convergence entre la finance de marché, l'analyse économétrique et la data science. À travers mes projets académiques et professionnels, je conçois des modèles prédictifs et des outils interactifs d'aide à la décision.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me situe à la croisée de la finance (de marché et d'entreprise), de l'actuariat, des méthodes économétriques et de la science des données. À travers mes projets académiques et professionnels, je développe des compétences transversales allant de la valorisation d'actifs et l'analyse financière globale au risk management, jusqu'à la conception de modèles prédictifs et d'outils d'aide à la décision.
 
 * **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
 * **📍 Localisation :** Agadir, Maroc
-* **💼 Objectif :** Recherche d'un **Stage de Fin d'Études (PFE)** à partir de février 2027 en finance quantitative, gestion des risques ou data science.
+* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en **Finance (Quantitative, d'Entreprise ou de Marché), Gestion des Risques, Actuariat, Data Science / Business Intelligence ou Conseil Analyste**.
 
 ---
 
-## 🛠️ Domaines d'Expertise & Compétences
+## 🎯 Domaines d'Expertise
 
-### 🎯 Axes d'Expertise
-* **Finance Quantitative & Marchés :** Valorisation des actifs & dérivés, greeks, modèles de pricing, allocations de portefeuille (Markowitz, ratio de Sharpe).
-* **Gestion des Risques :** Risques de marché, de crédit & de liquidité, VaR, modèles de volatilité, stress testing.
-* **Économétrie & Séries Temporelles :** Modélisation VAR/VECM, stationnarité, cointégration, prévisions macroéconomiques.
-* **Data Science & ML :** Apprentissage supervisé & non supervisé, modélisation prédictive, segmentation, détection d'anomalies.
+| Domaine | Thématiques & Compétences Clés |
+| :--- | :--- |
+| 🛡️ **Gestion des Risques & Réglementation** | Risk management (marché, crédit, liquidité), VaR, stress tests, volatilité & normes prudentielles (conformité, ratios). |
+| 📊 **Finance de Marché & Gestion de Portefeuille** | Valorisation des actifs & dérivés (options, futures), stratégies de trading/couverture, allocation (Markowitz, Sharpe), analyse technique & fondamentale. |
+| 💰 **Finance d'Entreprise & Analyse Financière** | Analyse des états financiers, calcul de rentabilité/ratios, valorisation d'entreprises, choix d'investissement & coût du capital. |
+| 🧮 **Actuariat & Assurance** | Mathématiques actuarielles, tarification, modélisation des risques assurantiels, analyse des sinistres & provisionnement. |
+| 📈 **Économétrie & Prévision** | Séries temporelles (VAR, VECM), modélisation statistique, analyse de volatilité & prévisions macroéconomiques/financières. |
+| 🤖 **Data Science Financière** | Machine Learning, modélisation prédictive, détection d'anomalies, segmentation & analyse quantitative de données. |
 
-### 💻 Stack Technique
+---
+
+## 💻 Stack Technique
 
 | Catégorie | Technologies & Outils |
 | :--- | :--- |
@@ -91,13 +96,13 @@ Bienvenue sur mon portfolio GitHub !
   * Algorithme K-Means visant à minimiser la variance intra-classe :
     $$\min_{\mu_1, \dots, \mu_K} \sum_{k=1}^{K} \sum_{x_i \in C_k} \|x_i - \mu_k\|^2$$
 * **Stack :** Python, Pandas, NumPy, Scikit-learn, Matplotlib.
-* **Livrables :** Code source & Visualisations (en cours de finalisation).
+* **Livrables :** Code source & Visualisations.
 
 ---
 
 ## 📬 Contact & Réseaux
 
-Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de collaborations sur des projets quantitatifs.
+Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de collaborations sur des projets quantitatifs, financiers et data.
 
 <div align="center">
 
