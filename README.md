@@ -25,7 +25,7 @@ Bienvenue sur mon portfolio GitHub !
 
 * **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
 * **📍 Localisation :** Agadir, Maroc
-* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en **Finance (Quantitative, d'Entreprise ou de Marché), Gestion des Risques, Actuariat, Data Science / Business Intelligence ou Conseil Analyste**.
+* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en **Finance Quantitative, Gestion de portfeuille et des Risques, Actuariat,Valorisation des produits financiers  Data Science / Business Intelligence ou Conseil Analyste appliquée a la finance **.
 
 ---
 
@@ -33,12 +33,14 @@ Bienvenue sur mon portfolio GitHub !
 
 | Domaine | Thématiques & Compétences Clés |
 | :--- | :--- |
-| 🛡️ **Gestion des Risques & Réglementation** | Risk management (marché, crédit, liquidité), VaR, stress tests, volatilité & normes prudentielles (conformité, ratios). |
-| 📊 **Finance de Marché & Gestion de Portefeuille** | Valorisation des actifs & dérivés (options, futures), stratégies de trading/couverture, allocation (Markowitz, Sharpe), analyse technique & fondamentale. |
-| 💰 **Finance d'Entreprise & Analyse Financière** | Analyse des états financiers, calcul de rentabilité/ratios, valorisation d'entreprises, choix d'investissement & coût du capital. |
-| 🧮 **Actuariat & Assurance** | Mathématiques actuarielles, tarification, modélisation des risques assurantiels, analyse des sinistres & provisionnement. |
-| 📈 **Économétrie & Prévision** | Séries temporelles (VAR, VECM), modélisation statistique, analyse de volatilité & prévisions macroéconomiques/financières. |
-| 🤖 **Data Science Financière** | Machine Learning, modélisation prédictive, détection d'anomalies, segmentation & analyse quantitative de données. |
+|  **Gestion des Risques & Réglementation** | Gestion des risques de marché, de crédit et de liquidité, VaR, stress tests, volatilité, couverture et normes prudentielles. |
+|  **Gestion de Portefeuille & Allocation d'Actifs** | Optimisation de portefeuille, modèle de Markowitz, ratio de Sharpe, diversification, stratégies d'allocation, mesure de performance et gestion actif-passif. |
+|  **Finance de Marché & Salles de Marché** | Fonctionnement des marchés financiers, instruments négociés, stratégies de trading, couverture, arbitrage, suivi des cours et analyse des tendances boursières. |
+|  **Valorisation des Produits Financiers** | Valorisation des actions, obligations, options, futures et autres produits dérivés, actualisation des flux financiers et modèles de pricing. |
+|  **Marchés Boursiers & Analyse Financière** | Analyse des actions et indices boursiers, analyse technique et fondamentale, étude des rendements, corrélations, liquidité et dynamique des marchés. |
+|  **Actuariat & Assurance** | Mathématiques actuarielles, tarification, modélisation des risques assurantiels, analyse des sinistres et provisionnement. |
+|  **Économétrie & Prévision Financière** | Séries temporelles (VAR, VECM), modélisation statistique, analyse de volatilité, prévisions financières et macroéconomiques. |
+|  **Data Science Appliquée à la Finance** | Machine Learning, modélisation prédictive, détection d'anomalies, segmentation et analyse quantitative des données financières. |
 
 ---
 
@@ -58,8 +60,7 @@ Bienvenue sur mon portfolio GitHub !
     $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
   * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
 * **Stack :** Python, NumPy, Pandas, Streamlit.
-* **Livrables **: [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · Application interactive · Code source · Application interactive · Code source.
-
+* **Livrables **: [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf) · [🖥️ Application interactive](https://salma-elidrissiappio-we7ksbstruhprcgyge9jtk.streamlit.app/) · [💻 Code source Python](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/appoptionlab.py)
 ---
 
 ### 📉 TAUX — Impact des Taux d'Intérêt sur l'Investissement au Maroc
@@ -70,7 +71,7 @@ Bienvenue sur mon portfolio GitHub !
   * Analyse de stationnarité (tests ADF/PP) et de cointégration (Johansen).
   * Modélisation par Modèle Vectoriel à Correction d'Erreur (VECM) pour capturer les dynamiques de court et long terme.
 * **Stack :** Python, EViews.
-* **Livrables :** Rapport économétrique · Application de visualisation.
+* **Livrables : [📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Etude_Econometrique/Documentation.pdf) · [🖥️ Application interactive](https://salma-elidrissiappio-bpadyjwxuaiujib7pi9wnx.streamlit.app/) · 
 
 ---
 
@@ -79,7 +80,7 @@ Bienvenue sur mon portfolio GitHub !
 * **Objectif :** Estimer le prix des billets à partir des caractéristiques de vol via des algorithmes de régression.
 * **Méthodologies :** Nettoyage des données, Feature Engineering, comparaison des modèles (Régression Linéaire, Random Forest, XGBoost) et évaluation sur jeux de test.
 * **Stack :** Python, Pandas, Scikit-learn, XGBoost.
-* **Livrable :** Rapport de projet.
+* **Livrable :[📄 Rapport de pricing](https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Data_Science/Rapport.pdf)
 
 ---
 
@@ -106,5 +107,5 @@ Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de col
 </p>
 
 <p align="center">
-<i>Merci de votre visite et de l'intérêt porté à mes projets.</i>
+<i>Merci de votre visite :).</i>
 </p>
