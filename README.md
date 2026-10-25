@@ -1,261 +1,108 @@
-Salma EL IDRISSI
-Élève ingénieure en Finance & Ingénierie Décisionnelle
+<div align="center">
 
-Finance quantitative · Économétrie · Data Science · Aide à la décision
+# Salma EL IDRISSI
 
-Bienvenue sur mon portfolio GitHub. Vous y trouverez mes projets académiques consacrés à la finance quantitative, à la modélisation économétrique, à l'apprentissage automatique et à l'analyse des données.
+**Élève Ingénieure en Finance & Ingénierie Décisionnelle (ENSA Agadir)**
 
-<p align="center">
-<a href="https://www.linkedin.com/in/salma-el-idrissi-171911224/"><img src="https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="mailto:salma.elidrissi@edu.uiz.ac.ma"><img src="https://img.shields.io/badge/Email-Me_contacter-64748B?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-<a href="https://salma-elidrissi.github.io/"><img src="https://img.shields.io/badge/Portfolio-Visiter_mon_site-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
-<a href="https://salma-elidrissi.github.io/cv-salma-ELIDRISSI.pdf"><img src="https://img.shields.io/badge/CV-Telecharger-15803D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="CV"></a>
-</p>
+Finance Quantitative · Économétrie · Data Science · Aide à la Décision
 
-À propos de moi
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salma-el-idrissi-171911224/)
+[![Email](https://img.shields.io/badge/Email-Me_contacter-64748B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:salma.elidrissi@edu.uiz.ac.ma)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visiter_mon_site-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white)](https://salma-elidrissi.github.io/)
+[![CV](https://img.shields.io/badge/CV-Télécharger-15803D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://salma-elidrissi.github.io/cv-salma-ELIDRISSI.pdf)
 
-Élève ingénieure en Finance et Ingénierie Décisionnelle à l'ENSA, je m'intéresse à l'intersection de la finance, des méthodes quantitatives et de la science des données.
+---
 
-À travers mes projets, je développe mes compétences en modélisation financière, analyse économétrique, apprentissage automatique et conception d'outils d'aide à la décision.
+</div>
 
-🎓 Formation : Cycle ingénieur en Finance et Ingénierie Décisionnelle
-📍 Localisation : Agadir, Maroc
-💼 Objectif : À la recherche d'un stage ou d'un projet de fin d'études (PFE) en finance quantitative, data science ou analyse financière.
-Domaines d'expertise
-Domaine	Principales thématiques
-Finance quantitative	Valorisation des actifs, modèles de pricing, sensibilités et produits dérivés
-Gestion des risques	Risques de marché, de crédit et de liquidité, VaR, volatilité et stress tests
-Gestion de portefeuille	Allocation d'actifs, diversification, modèle de Markowitz et ratio de Sharpe
-Marchés financiers	Analyse des actions et indices, analyse technique et fondamentale
-Trading et produits dérivés	Options, contrats à terme, couverture et valorisation
-Économétrie et prévision	Séries temporelles, modèles VAR/VECM, tests statistiques et prévision
-Data science	Machine learning, modélisation prédictive, analyse de données et détection d'anomalies
-Actuariat	Modélisation des risques assurantiels, analyse des sinistres et provisions
-Analyse financière	États financiers, ratios, rentabilité et valorisation d'entreprises
-Finance d'entreprise	Décisions d'investissement, coût du capital et évaluation de projets
-Réglementation financière	Normes prudentielles, contrôle des risques et conformité
-Projets académiques
-Code	Projet	Domaine	Livrables
-OPT	Pricing d'options	Finance quantitative	Rapport · Application · Code
-TAUX	Impact des taux d'intérêt sur l'investissement au Maroc	Économétrie financière	Rapport · Application
-VOL	Prédiction des prix des billets d'avion	Data science	Rapport
-SEG	Classification et segmentation par CAH et K-means	Machine learning	Méthodologie · Code à compléter
-📈 OPT — Pricing d'options
+## 👤 À propos de moi
 
-Objectif : Étudier la valorisation des options financières et calculer leurs sensibilités aux principaux paramètres du marché à l'aide de méthodes numériques et d'une interface interactive.
+Bienvenue sur mon portfolio GitHub ! 
 
-Le projet permet d'analyser l'influence du prix du sous-jacent, du prix d'exercice, du taux sans risque, de la volatilité et de la maturité sur la valeur d'une option.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me passionne pour la convergence entre la finance de marché, l'analyse économétrique et la data science. À travers mes projets académiques et professionnels, je conçois des modèles prédictifs et des outils interactifs d'aide à la décision.
 
-Formule de Black-Scholes pour un call européen sans dividendes :
+* **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
+* **📍 Localisation :** Agadir, Maroc
+* **💼 Objectif :** Recherche d'un **Stage de Fin d'Études (PFE)** à partir de février 2027 en finance quantitative, gestion des risques ou data science.
 
-𝐶
-=
-𝑆
-0
-𝑁
-(
-𝑑
-1
-)
-−
-𝐾
-𝑒
-−
-𝑟
-𝑇
-𝑁
-(
-𝑑
-2
-)
+---
 
-avec :
+## 🛠️ Domaines d'Expertise & Compétences
 
-𝑑
-1
-=
-ln
-⁡
-(
-𝑆
-0
-/
-𝐾
-)
-+
-(
-𝑟
-+
-𝜎
-2
-/
-2
-)
-𝑇
-𝜎
-𝑇
-,
-𝑑
-2
-=
-𝑑
-1
-−
-𝜎
-𝑇
+### 🎯 Axes d'Expertise
+* **Finance Quantitative & Marchés :** Valorisation des actifs & dérivés, greeks, modèles de pricing, allocations de portefeuille (Markowitz, ratio de Sharpe).
+* **Gestion des Risques :** Risques de marché, de crédit & de liquidité, VaR, modèles de volatilité, stress testing.
+* **Économétrie & Séries Temporelles :** Modélisation VAR/VECM, stationnarité, cointégration, prévisions macroéconomiques.
+* **Data Science & ML :** Apprentissage supervisé & non supervisé, modélisation prédictive, segmentation, détection d'anomalies.
 
-Méthodes :
+### 💻 Stack Technique
 
-Modèle de Black-Scholes
-Modèle binomial de Cox-Ross-Rubinstein (CRR)
-Modèle trinomial
+| Catégorie | Technologies & Outils |
+| :--- | :--- |
+| **Langages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white) |
+| **Data Science & ML** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) |
+| **Économétrie & Finance** | EViews, Excel (Modélisation avancée) |
+| **Déploiement & DevOps** | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) |
 
-Outils : Python, NumPy, Pandas, Streamlit
+---
 
-Livrables :
+## 🚀 Projets Académiques
 
-📄 Rapport de pricing
-🖥️ Application interactive
-💻 Code source Python
-📉 TAUX — Impact des taux d'intérêt sur l'investissement au Maroc
+### 📈 OPT — Pricing d'Options & Analyse des Sensibilités
+* **Domaine :** Finance quantitative
+* **Objectif :** Valoriser les options financières et calculer leurs sensibilités (Greeks) via une application web interactive.
+* **Méthodologies :**
+  * Modèle analytique de Black-Scholes pour call/put européens :
+    $$C = S_0 N(d_1) - K e^{-rT} N(d_2)$$
+    avec :
+    $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
+  * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
+* **Stack :** Python, NumPy, Pandas, Streamlit.
+* **Livrables :** Rapport de pricing · Application interactive · Code source.
 
-Objectif : Analyser la relation entre l'évolution des taux d'intérêt et les décisions d'investissement au Maroc à l'aide de méthodes économétriques appliquées aux séries temporelles.
+---
 
-La problématique centrale consiste à examiner si une hausse des taux d'intérêt est associée à une diminution de l'investissement :
+### 📉 TAUX — Impact des Taux d'Intérêt sur l'Investissement au Maroc
+* **Domaine :** Économétrie financière
+* **Objectif :** Étudier l'impact des variations de taux d'intérêt sur la dynamique d'investissement national, en vérifiant la relation théorique :
+  $$\frac{\partial I}{\partial r} < 0$$
+* **Méthodologies :**
+  * Analyse de stationnarité (tests ADF/PP) et de cointégration (Johansen).
+  * Modélisation par Modèle Vectoriel à Correction d'Erreur (VECM) pour capturer les dynamiques de court et long terme.
+* **Stack :** Python, EViews.
+* **Livrables :** Rapport économétrique · Application de visualisation.
 
-∂
-𝐼
-∂
-𝑟
-<
-0
+---
 
-Méthodologie :
+### ✈️ VOL — Prédiction des Prix des Billets d'Avion
+* **Domaine :** Data Science & Machine Learning
+* **Objectif :** Estimer le prix des billets à partir des caractéristiques de vol via des algorithmes de régression.
+* **Méthodologies :** Nettoyage des données, Feature Engineering, comparaison des modèles (Régression Linéaire, Random Forest, XGBoost) et évaluation sur jeux de test.
+* **Stack :** Python, Pandas, Scikit-learn, XGBoost.
+* **Livrable :** Rapport de projet.
 
-Analyse exploratoire et préparation des séries temporelles
-Étude de la stationnarité des variables
-Modélisation par un modèle VECM, sous réserve de la présence d'une relation de cointégration
-Interprétation des relations de long terme et des ajustements de court terme
+---
 
-Outils : Python, EViews
+### 🧩 SEG — Segmentation Client par Apprentissage Non Supervisé
+* **Domaine :** Machine Learning
+* **Objectif :** Identifier des profils homogènes au sein d'un jeu de données complexe.
+* **Méthodologies :**
+  * Classification Ascendante Hiérarchique (CAH) & Analyse du dendrogramme.
+  * Algorithme K-Means visant à minimiser la variance intra-classe :
+    $$\min_{\mu_1, \dots, \mu_K} \sum_{k=1}^{K} \sum_{x_i \in C_k} \|x_i - \mu_k\|^2$$
+* **Stack :** Python, Pandas, NumPy, Scikit-learn, Matplotlib.
+* **Livrables :** Code source & Visualisations (en cours de finalisation).
 
-Livrables :
+---
 
-📄 Rapport économétrique
-🖥️ Application en ligne
-✈️ VOL — Prédiction des prix des billets d'avion
+## 📬 Contact & Réseaux
 
-Objectif : Développer un modèle de machine learning capable d'estimer le prix d'un billet d'avion à partir des caractéristiques du vol.
+Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de collaborations sur des projets quantitatifs.
 
-Démarche :
+<div align="center">
 
-Nettoyage et préparation des données
-Analyse exploratoire et sélection des variables explicatives
-Entraînement et comparaison de modèles prédictifs
-Évaluation des performances sur des données de test
+[![Email](https://img.shields.io/badge/Email-salma.elidrissi@edu.uiz.ac.ma-64748B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:salma.elidrissi@edu.uiz.ac.ma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Salma_EL_IDRISSI-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salma-el-idrissi-171911224/)
+[![Portfolio](https://img.shields.io/badge/Site_Web-salma--elidrissi.github.io-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white)](https://salma-elidrissi.github.io/)
 
-Modèles étudiés :
-
-Régression linéaire
-Random Forest Regressor
-XGBoost Regressor
-
-Outils : Python, Pandas, Scikit-learn, XGBoost
-
-Livrable :
-
-📄 Rapport du projet
-
-Les métriques de performance seront ajoutées après vérification des résultats expérimentaux.
-
-🧩 SEG — Classification et segmentation par CAH et K-means
-
-Objectif : Identifier des groupes homogènes dans un jeu de données à l'aide de deux méthodes complémentaires d'apprentissage non supervisé.
-
-Méthodes :
-
-Classification ascendante hiérarchique (CAH) : construction d'une hiérarchie de groupes et analyse du dendrogramme.
-K-means : partitionnement des observations autour de centroïdes.
-Comparaison des résultats et interprétation des segments obtenus.
-Étude du nombre de groupes et de la cohérence des classifications.
-
-Fonction objectif de K-means :
-
-min
-⁡
-𝜇
-1
-,
-…
-,
-𝜇
-𝐾
-∑
-𝑘
-=
-1
-𝐾
-∑
-𝑥
-𝑖
-∈
-𝐶
-𝑘
-∥
-𝑥
-𝑖
-−
-𝜇
-𝑘
-∥
-2
-
-Outils : Python, Pandas, NumPy, Scikit-learn, Matplotlib
-
-Livrables : Les liens vers le rapport, le code source et les visualisations seront ajoutés dès leur publication.
-
-Compétences techniques
-Programmation et analyse de données
-
-<p>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy">
-<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
-<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="SQL">
-</p>
-
-Outils financiers et économétriques
-Excel
-EViews
-Modélisation économétrique et analyse des séries temporelles
-Valorisation des produits dérivés
-Analyse statistique et modélisation prédictive
-Outils de développement
-
-<p>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
-</p>
-
-Formation
-
-Cycle ingénieur en Finance et Ingénierie Décisionnelle
-École Nationale des Sciences Appliquées d'Agadir (ENSA-A)
-2022 – présent
-
-Contact
-
-Je suis ouverte aux opportunités de stage et aux projets me permettant d'approfondir mes compétences.
-
-<p align="center">
-<a href="mailto:salma.elidrissi@edu.uiz.ac.ma"><img src="https://img.shields.io/badge/Email-Me_contacter-64748B?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-<a href="https://www.linkedin.com/in/salma-el-idrissi-171911224/"><img src="https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="https://salma-elidrissi.github.io/cv-salma-ELIDRISSI.pdf"><img src="https://img.shields.io/badge/CV-Telecharger-15803D?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="CV"></a>
-</p>
-
-<p align="center">
-<i>Merci de votre visite et de l'intérêt porté à mes projets.</i>
-</p>
+</div>
