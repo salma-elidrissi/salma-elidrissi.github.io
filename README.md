@@ -107,5 +107,5 @@ Je suis à l'écoute d'opportunités de stages, d'échanges techniques ou de col
 </p>
 
 <p align="center">
-<i>Merci de votre visite :).</i>
+<i>Merci de votre visite :)</i>
 </p>
