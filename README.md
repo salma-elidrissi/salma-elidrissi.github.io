@@ -4,7 +4,6 @@
 
 **Élève Ingénieure en Finance & Ingénierie Décisionnelle**
 
-Finance Quantitative · Actuariat · Risk Management · Data Science
 
 <p align="center">
 <a href="https://www.linkedin.com/in/salma-el-idrissi-171911224/"><img src="https://img.shields.io/badge/LinkedIn-Mon_profil-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
