@@ -24,7 +24,7 @@ Bienvenue sur mon portfolio GitHub !
 
 * **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
 * **📍 Localisation :** Agadir, Maroc
-* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en **Finance Quantitative, Gestion de portfeuille et des Risques, Actuariat,Valorisation des produits financiers  Data Science / Business Intelligence ou Conseil Analyste appliquée a la finance **.
+* **💼 Objectif :** À la recherche d'un **Stage de Fin d'Études (PFE)** ou d'opportunités professionnelles à partir de février 2027 en Finance Quantitative, Gestion de portfeuille et des Risques, Actuariat,Valorisation des produits financiers  Data Science / Business Intelligence ou Conseil Analyste appliquée a la finance .
 
 ---
 
