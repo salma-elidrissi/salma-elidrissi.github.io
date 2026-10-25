@@ -21,7 +21,7 @@ Finance Quantitative · Actuariat · Risk Management · Data Science
 
 Bienvenue sur mon portfolio GitHub ! 
 
-Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me situe à la croisée de la finance (de marché et d'entreprise), de l'actuariat, des méthodes économétriques et de la science des données. À travers mes projets académiques et professionnels, je développe des compétences transversales allant de la valorisation d'actifs et l'analyse financière globale au risk management, jusqu'à la conception de modèles prédictifs et d'outils d'aide à la décision.
+Élève ingénieure en **Finance et Ingénierie Décisionnelle** à l'ENSA Agadir, je me situe à la croisée de la finance, de l'actuariat, des méthodes économétriques et de la science des données. À travers mes projets académiques et professionnels, je développe des compétences transversales allant de la valorisation d'actifs et l'analyse financière globale au risk management, jusqu'à la conception de modèles prédictifs et d'outils d'aide à la décision.
 
 * **🎓 Formation :** Cycle Ingénieur en Finance et Ingénierie Décisionnelle (2022 – Présent)
 * **📍 Localisation :** Agadir, Maroc
@@ -58,7 +58,7 @@ Bienvenue sur mon portfolio GitHub !
     $$d_1 = \frac{\ln(S_0 / K) + (r + \sigma^2 / 2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}$$
   * Modèle binomial de Cox-Ross-Rubinstein (CRR) & Modèle trinomial.
 * **Stack :** Python, NumPy, Pandas, Streamlit.
-* **Livrables :** Rapport de pricing · Application interactive · Code source.
+* **Livrables :** Rapport de pricing("https://github.com/salma-elidrissi/salma-elidrissi.github.io/blob/main/Optionlab/pricing_option_arbres.pdf") · Application interactive · Code source.
 
 ---
 
